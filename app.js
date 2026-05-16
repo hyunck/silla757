@@ -63,6 +63,10 @@
     panelMode: 'search',         // 'search' | 'detail'
     panelOpen: false,
     selectedTextEl: null,
+    // 렌더링 최적화
+    rafPending: false,           // rAF throttle 플래그 (wheel 이벤트용)
+    wheelTimer: null,            // 휠 정지 감지 타이머
+    committedViewBox: null,      // CSS transform 기준이 되는 확정된 viewBox
     layers: {
       'ju-boundary': true,        // 9주 경계 (기본 ON)
       'balhae-border': true,      // 발해 국경 (기본 ON)
@@ -139,6 +143,7 @@
     const vb = svg.getAttribute('viewBox').split(/\s+/).map(Number);
     state.svgOriginalViewBox = { x: vb[0], y: vb[1], w: vb[2], h: vb[3] };
     state.currentViewBox = { ...state.svgOriginalViewBox };
+    state.committedViewBox = { ...state.svgOriginalViewBox };
 
     // preserveAspectRatio 설정 (지도가 화면에 비례 유지)
     svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
@@ -412,27 +417,39 @@
     if (Math.abs(dx) > 2 || Math.abs(dy) > 2) state.panMoved = true;
 
     const rect = els.map.getBoundingClientRect();
-    // 화면 픽셀 → SVG 좌표 비율
     const scaleX = state.panStart.vb.w / rect.width;
     const scaleY = state.panStart.vb.h / rect.height;
     state.currentViewBox.x = state.panStart.vb.x - dx * scaleX;
     state.currentViewBox.y = state.panStart.vb.y - dy * scaleY;
-    applyViewBox();
+
+    // 팬 중: CSS transform으로 이동 (viewBox 변경 없음 → 레이아웃 재계산 없음)
+    applySvgTransform();
   }
   function onPanEnd() {
     if (!state.isPanning) return;
     state.isPanning = false;
     els.map.classList.remove('dragging');
+    // 팬 종료: viewBox 확정 후 transform 제거
+    commitViewBox();
   }
 
   function onWheel(e) {
     e.preventDefault();
+
+    // rAF throttle: 60fps 초과 이벤트 무시
+    if (state.rafPending) return;
+    state.rafPending = true;
+    requestAnimationFrame(() => { state.rafPending = false; });
+
     const rect = els.map.getBoundingClientRect();
-    // 마우스 위치를 SVG 좌표로 변환
     const mx = (e.clientX - rect.left) / rect.width;
     const my = (e.clientY - rect.top) / rect.height;
     const factor = e.deltaY < 0 ? ZOOM_WHEEL_FACTOR : 1 / ZOOM_WHEEL_FACTOR;
     zoomAt(mx, my, factor);
+
+    // 휠 정지 150ms 후 viewBox 확정 (텍스트 선명도 복원)
+    clearTimeout(state.wheelTimer);
+    state.wheelTimer = setTimeout(commitViewBox, 150);
   }
 
   /* 두 손가락 핀치 줌 */
@@ -468,7 +485,7 @@
       const scaleY = state.panStart.vb.h / rect.height;
       state.currentViewBox.x = state.panStart.vb.x - dx * scaleX;
       state.currentViewBox.y = state.panStart.vb.y - dy * scaleY;
-      applyViewBox();
+      applySvgTransform();
       e.preventDefault();
     } else if (e.touches.length === 2 && touchState) {
       const [a, b] = e.touches;
@@ -477,8 +494,6 @@
       const rect = els.map.getBoundingClientRect();
       const mx = (touchState.midX - rect.left) / rect.width;
       const my = (touchState.midY - rect.top) / rect.height;
-      // 기준점을 vb로 환원해서 줌 계산 (한 번에)
-      // 단순화: 작은 핀치는 매 프레임 zoomAt 호출
       state.currentViewBox = { ...touchState.vb };
       zoomAt(mx, my, factor);
       e.preventDefault();
@@ -488,8 +503,10 @@
     if (e.touches.length === 0) {
       state.isPanning = false;
       touchState = null;
+      commitViewBox();  // 터치 종료 시 viewBox 확정
     } else if (e.touches.length === 1 && touchState) {
       // 핀치 → 1손가락 팬으로 전환
+      commitViewBox();
       const t = e.touches[0];
       state.isPanning = true;
       state.panStart = { x: t.clientX, y: t.clientY, vb: { ...state.currentViewBox } };
@@ -498,7 +515,6 @@
   }
 
   function zoomAt(normX, normY, factor) {
-    // 현재 viewBox에서 (normX, normY)에 해당하는 SVG 좌표
     const cvb = state.currentViewBox;
     const targetX = cvb.x + cvb.w * normX;
     const targetY = cvb.y + cvb.h * normY;
@@ -506,7 +522,6 @@
     let newW = cvb.w / factor;
     let newH = cvb.h / factor;
 
-    // 줌 범위 제한
     const origW = state.svgOriginalViewBox.w;
     const minW = origW / ZOOM_MAX;
     const maxW = origW / ZOOM_MIN;
@@ -527,7 +542,8 @@
     state.currentViewBox.h = newH;
     state.zoom = origW / newW;
 
-    applyViewBox();
+    // 줌 중에도 CSS transform (viewBox 변경은 정지 후 commitViewBox에서)
+    applySvgTransform();
     applyZoomLevel();
   }
 
@@ -537,7 +553,54 @@
       animateViewBox(vb);
     } else {
       state.svgEl.setAttribute('viewBox', `${vb.x} ${vb.y} ${vb.w} ${vb.h}`);
+      state.committedViewBox = { ...vb };
+      state.svgEl.style.transform = '';
     }
+  }
+
+  /**
+   * CSS transform으로 SVG를 이동/스케일 (GPU 가속, 레이아웃 재계산 없음).
+   * committedViewBox 기준으로 currentViewBox까지의 차이를 transform으로 표현.
+   *
+   * 원리:
+   *   - SVG는 viewBox=committed 상태로 고정 (픽셀 → SVG 좌표 매핑 불변)
+   *   - currentViewBox와 committedViewBox의 차이를 CSS transform(scale + translate)로 표현
+   *   - 팬 종료/휠 정지 시 commitViewBox()로 viewBox를 확정하고 transform을 제거
+   */
+  function applySvgTransform() {
+    const svg = state.svgEl;
+    if (!svg) return;
+    const cvb = state.currentViewBox;
+    const com = state.committedViewBox;
+    if (!com) return;
+
+    // 스케일 비율: committed 대비 current의 확대/축소
+    const scaleX = com.w / cvb.w;
+    const scaleY = com.h / cvb.h;
+
+    // SVG 요소 좌상단(0,0) 기준 translate 계산
+    // committed viewBox에서 current viewBox 좌상단이 어디 있는지 (SVG 좌표 → 픽셀 비율)
+    const tx = -(cvb.x - com.x) / com.w;  // 정규화된 좌표 (0~1)
+    const ty = -(cvb.y - com.y) / com.h;
+
+    // CSS transform: origin을 (0,0)으로 두고 계산
+    svg.style.transformOrigin = '0 0';
+    svg.style.transform = `translate(${tx * 100}%, ${ty * 100}%) scale(${scaleX}, ${scaleY})`;
+  }
+
+  /**
+   * viewBox를 currentViewBox로 확정하고 CSS transform 제거.
+   * 팬 종료, 휠 정지(150ms), 터치 종료 시 호출.
+   * 이 시점에서 브라우저가 실제 SVG를 재렌더링 — 텍스트 선명도 복원.
+   */
+  function commitViewBox() {
+    const svg = state.svgEl;
+    if (!svg) return;
+    const vb = state.currentViewBox;
+    svg.style.transform = '';
+    svg.style.transformOrigin = '';
+    svg.setAttribute('viewBox', `${vb.x} ${vb.y} ${vb.w} ${vb.h}`);
+    state.committedViewBox = { ...vb };
   }
 
   function animateViewBox(targetVb, duration = 600) {
