@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>경덕왕 16년(757년) 신라 지도</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 좌측 사이드 패널 (검색바 + 검색결과/설명창) -->
+  <aside id="sidePanel" class="side-panel" aria-label="검색 및 지명 설명">
+    <!-- 패널 상단: 검색바 (항상 표시) -->
+    <div class="search-bar">
+      <button id="backBtn" class="icon-btn back-btn" aria-label="검색으로 돌아가기" title="검색으로" hidden>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="search-input-wrap">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input id="searchInput" type="text" placeholder="지명 검색 (예: 금성, 한주)" autocomplete="off" spellcheck="false">
+        <button id="clearBtn" class="icon-btn clear-btn" aria-label="검색어 지우기" hidden>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M6 18L18 6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- 패널 본문 -->
+    <div class="panel-body">
+      <!-- 검색 모드 -->
+      <div id="searchMode" class="panel-mode search-mode">
+        <ul id="searchResults" class="search-results" role="listbox"></ul>
+        <div id="searchEmpty" class="search-empty">
+          <p>지명을 검색해보세요.</p>
+          <p class="search-hint">9주 · 5소경 · 군 · 현 · 10정 · 6기정 · 주변국 · 속국</p>
+        </div>
+      </div>
+
+      <!-- 설명 모드 -->
+      <div id="detailMode" class="panel-mode detail-mode" hidden>
+        <div class="detail-category-tag" id="detailCategoryTag"></div>
+        <h2 id="detailTitle" class="detail-title"></h2>
+        <p id="detailHanja" class="detail-hanja"></p>
+        <div class="detail-divider"></div>
+        <div id="detailContent" class="detail-content">
+          <p class="detail-placeholder">상세 설명이 추후 추가될 예정입니다.</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 패널 토글 버튼: 패널 상태에 따라 좌측 가장자리 또는 패널 우측 가장자리에 표시 -->
+  <button id="panelToggleBtn" class="panel-toggle-btn" aria-label="패널 열기/닫기" title="패널 열기/닫기">
+    <svg class="toggle-icon-open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    <svg class="toggle-icon-close" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+
+  <!-- 지도 영역 -->
+  <main id="mapContainer" class="map-container"
+        data-zoom-level="L1"
+        data-layer-juboundary="on"
+        data-layer-balhae-border="on"
+        data-layer-region="off"
+        data-layer-admin="off"
+        data-layer-gunhyeon="on"
+        data-layer-jeong="off"
+        data-layer-neighbors="on"
+        data-layer-vassals="on">
+    <!-- 지도 SVG는 JS로 로드됨 -->
+    <div id="mapLoading" class="map-loading">
+      <div class="loading-spinner"></div>
+      <p>지도를 불러오는 중…</p>
+    </div>
+  </main>
+
+  <!-- 우측 상단: 줌 컨트롤 -->
+  <div class="zoom-controls">
+    <button id="zoomInBtn" class="zoom-btn" aria-label="확대" title="확대 (+)">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+    </button>
+    <div class="zoom-divider"></div>
+    <button id="zoomOutBtn" class="zoom-btn" aria-label="축소" title="축소 (−)">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14"/></svg>
+    </button>
+    <div class="zoom-divider"></div>
+    <button id="resetBtn" class="zoom-btn" aria-label="초기화" title="처음 화면으로">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><polyline points="3 4 3 9 8 9"/></svg>
+    </button>
+  </div>
+
+  <!-- 우측 하단: 레이어 토글 -->
+  <div class="layer-controls">
+    <!-- 그룹 1: 행정구역 (군현 ↔ 정 군대) -->
+    <div class="layer-group">
+      <div class="layer-group-title">행정구역</div>
+      <button class="layer-btn active" data-layer="gun-hyeon" aria-pressed="true">
+        <span class="layer-swatch swatch-gun-hyeon"></span>
+        <span class="layer-label">군·현</span>
+      </button>
+      <button class="layer-btn" data-layer="jeong" aria-pressed="false">
+        <span class="layer-swatch swatch-jeong"></span>
+        <span class="layer-label">6기정·10정</span>
+      </button>
+    </div>
+
+    <!-- 그룹 2: 경계선 -->
+    <div class="layer-group">
+      <div class="layer-group-title">경계선</div>
+      <button class="layer-btn active" data-layer="ju-boundary" aria-pressed="true">
+        <span class="layer-swatch swatch-ju"></span>
+        <span class="layer-label">9주 경계</span>
+      </button>
+      <button class="layer-btn active" data-layer="balhae-border" aria-pressed="true">
+        <span class="layer-swatch swatch-balhae-border"></span>
+        <span class="layer-label">발해 국경</span>
+      </button>
+      <button class="layer-btn" data-layer="modern-region" aria-pressed="false">
+        <span class="layer-swatch swatch-region"></span>
+        <span class="layer-label">광역자치단체</span>
+      </button>
+      <button class="layer-btn" data-layer="modern-admin" aria-pressed="false">
+        <span class="layer-swatch swatch-admin"></span>
+        <span class="layer-label">기초자치단체</span>
+      </button>
+    </div>
+
+    <!-- 그룹 3: 주변 지역 -->
+    <div class="layer-group">
+      <div class="layer-group-title">주변 지역</div>
+      <button class="layer-btn active" data-layer="neighbors" aria-pressed="true">
+        <span class="layer-swatch swatch-neighbors"></span>
+        <span class="layer-label">주변국</span>
+      </button>
+      <button class="layer-btn active" data-layer="vassals" aria-pressed="true">
+        <span class="layer-swatch swatch-vassals"></span>
+        <span class="layer-label">속국</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 좌측 하단: 줌 레벨 표시 -->
+  <div id="zoomIndicator" class="zoom-indicator">
+    <span class="zoom-level-label">표시</span>
+    <span class="zoom-level-value" id="zoomLevelValue">9주·5소경</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

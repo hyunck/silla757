@@ -1,0 +1,761 @@
+/* =========================================================
+   757년 신라 지도 뷰어 — 스타일시트
+   네이버 지도 스타일을 기반으로 한 정제된 디자인
+   ========================================================= */
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 400 800;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/woff2/PretendardVariable.woff2') format('woff2-variations');
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f4f1ea;
+  --map-bg: #f6f3ec;
+  --land: transparent;     /* 영토(육지) 채움 색 — 투명하게 해서 배경 그라데이션이 그대로 보임 */
+  --surface: #ffffff;
+  --border: #e8e4d9;
+  --border-strong: #c9c4b6;
+  --text: #1a1a1a;
+  --text-secondary: #555;
+  --text-muted: #999;
+  --accent: #1d4e8c;
+  --accent-light: #e7f0fa;
+  --accent-hover: #163d6e;
+  --highlight: #d8b865;
+
+  --cat-ju: #1d4e8c;
+  --cat-sogyeong: #6f3895;
+  --cat-geumseong: #b54b3a;
+  --cat-gun: #2a6b3d;
+  --cat-hyeon: #6e6e6e;
+  --cat-jeong10: #b54b3a;
+  --cat-gijeong6: #b54b3a;
+  --cat-vassal: #826a3a;
+  --cat-neighbor: #444;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+  --shadow-md: 0 4px 14px rgba(0,0,0,0.09), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.14), 0 4px 10px rgba(0,0,0,0.06);
+
+  --panel-width: 360px;
+  --transition: 240ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  --transition-fast: 160ms ease;
+
+  --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+               'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'tnum' 1;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* =========================================================
+   지도 컨테이너
+   ========================================================= */
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at 55% 45%, #fbf8f0 0%, #ede9dc 75%, #e3dfd1 100%);
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+}
+.map-container.dragging { cursor: grabbing; }
+.map-container svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* 지도 텍스트: 검정 통일, 폰트 적용, 인터랙션 */
+.map-container svg text.place-text,
+.map-container svg text.place-text tspan {
+  fill: #1a1a1a !important;
+  font-family: var(--font-sans) !important;
+  font-weight: 600;
+  cursor: pointer;
+  transition: fill var(--transition-fast);
+  paint-order: stroke;
+  stroke: rgba(246, 243, 236, 0.85);
+  stroke-width: 2.5px;
+  stroke-linejoin: round;
+}
+.map-container svg text.place-text:hover,
+.map-container svg text.place-text:hover tspan {
+  fill: var(--accent) !important;
+}
+.map-container svg text.place-text.is-selected,
+.map-container svg text.place-text.is-selected tspan {
+  fill: var(--accent) !important;
+  font-weight: 800;
+  stroke-width: 3px;
+}
+
+/* 주변국·속국·발해 등 큰 글자는 그대로 살리되 검정으로 */
+.map-container svg text.place-cat-neighbor,
+.map-container svg text.place-cat-neighbor tspan,
+.map-container svg text.place-cat-vassal,
+.map-container svg text.place-cat-vassal tspan {
+  fill: #1a1a1a !important;
+}
+
+/* 발해, 고구려인은 시각 효과상 살짝 옅게 */
+.map-container svg #발해 text,
+.map-container svg #발해 tspan,
+.map-container svg #고구려인 text,
+.map-container svg #고구려인 tspan,
+.map-container svg #안동도호부 text,
+.map-container svg #안동도호부 tspan {
+  fill: #2a2a2a !important;
+  opacity: 0.65;
+}
+
+/* 타이틀은 숨김 (요구사항) */
+.map-container svg #타이틀 { display: none; }
+/* 레이어 17은 제작용이라 숨김 — SVG에 레이어_17이 있다면 */
+.map-container svg #레이어_17 { display: none; }
+
+/* 지역 구분(광역) / 레이어_15(현 행정구역) 기본 OFF */
+.map-container svg #지역_구분 { display: none; }
+.map-container svg #레이어_15 { display: none; }
+
+/* 토글 ON 시 표시 */
+.map-container[data-layer-region="on"] svg #지역_구분 { display: inline; }
+.map-container[data-layer-admin="on"] svg #레이어_15 { display: inline; }
+.map-container[data-layer-juboundary="off"] svg #주_경계 { display: none; }
+
+/* =========================================================
+   줌 레벨별 텍스트 표시/크기 제어
+   - 9주/5소경 大 텍스트는 항상 표시, 크기만 조절
+   - 9주/5소경 小 텍스트는 사용 안 함 (숨김)
+   - 군/현은 L2부터, 6기정/10정은 L3부터 등장 (레이어 토글과 AND)
+   ========================================================= */
+
+/* 9주 小, 5소경 小은 사용하지 않음 - 항상 숨김 */
+.map-container svg #_9주_小_ { display: none; }
+.map-container svg #_5소경_小_ { display: none; }
+
+/* 텍스트 페이드 전환 */
+.map-container svg #_9주 text,
+.map-container svg #_5소경 text,
+.map-container svg #금성 text,
+.map-container svg #군 text,
+.map-container svg #현 text,
+.map-container svg #_10정 text,
+.map-container svg #_6기정 text,
+.map-container svg #대성군 text,
+.map-container svg #상성군 text {
+  transition: opacity 0.22s ease, font-size 0.22s ease;
+}
+
+/* ===== 9주 大 텍스트 크기 (줌 레벨별, !important로 SVG 클래스 덮어쓰기) =====
+   원본 9주 = 30px, 5소경 = 24px, 군 = 12px, 현 ≈ 10px
+   L1: 원본 크기 유지 (도/광역시급)
+   L2: 시·군급으로 축소 (~18px)
+   L3: 군 텍스트와 비슷한 크기 (~13px)
+   한자 tspan도 같이 줄여야 함 (cls-496 = 9주 한자 20px, cls-493 = 5소경 한자 ~20px)
+*/
+.map-container[data-zoom-level="L2"] svg #_9주 text { font-size: 18px !important; }
+.map-container[data-zoom-level="L2"] svg #_9주 text tspan { font-size: 12px !important; }
+.map-container[data-zoom-level="L3"] svg #_9주 text { font-size: 13px !important; }
+.map-container[data-zoom-level="L3"] svg #_9주 text tspan { font-size: 9px !important; }
+
+.map-container[data-zoom-level="L2"] svg #_5소경 text { font-size: 16px !important; }
+.map-container[data-zoom-level="L2"] svg #_5소경 text tspan { font-size: 11px !important; }
+.map-container[data-zoom-level="L3"] svg #_5소경 text { font-size: 12px !important; }
+.map-container[data-zoom-level="L3"] svg #_5소경 text tspan { font-size: 8px !important; }
+
+/* ===== 10정 텍스트 크기 — '군' 급으로 축소 =====
+   원본 10정 = 15px (한자 12px), 군 = 12px (한자 8px)
+   10정이 보이는 L3에서만 적용하면 충분
+*/
+.map-container svg #_10정 text { font-size: 12px !important; }
+.map-container svg #_10정 text tspan { font-size: 8px !important; }
+
+/* ----- L1 (기본): 9주, 5소경, 금성만 ----- */
+.map-container[data-zoom-level="L1"] svg #군 { display: none; }
+.map-container[data-zoom-level="L1"] svg #현 { display: none; }
+.map-container[data-zoom-level="L1"] svg #_10정 { display: none; }
+.map-container[data-zoom-level="L1"] svg #_6기정 { display: none; }
+.map-container[data-zoom-level="L1"] svg #대성군 { display: none; }
+.map-container[data-zoom-level="L1"] svg #상성군 { display: none; }
+
+/* ----- L2 (1.8~3.0배): 9주(중), 5소경(중), 군 — 금성 사라짐 ----- */
+.map-container[data-zoom-level="L2"] svg #금성 { display: none; }
+.map-container[data-zoom-level="L2"] svg #현 { display: none; }
+.map-container[data-zoom-level="L2"] svg #_10정 { display: none; }
+.map-container[data-zoom-level="L2"] svg #_6기정 { display: none; }
+.map-container[data-zoom-level="L2"] svg #대성군 { display: none; }
+.map-container[data-zoom-level="L2"] svg #상성군 { display: none; }
+
+/* ----- L3 (3.0배 이상): 9주(소), 5소경(소), 군, 현, 10정, 6기정 ----- */
+.map-container[data-zoom-level="L3"] svg #금성 { display: none; }
+
+/* ===== 레이어 토글 =====
+   기본 원칙:
+   - 토글이 OFF인 카테고리는 줌 레벨에 관계없이 강제로 숨김
+   - 토글이 ON인 카테고리는 줌 레벨 규칙을 그대로 따름
+   - 군·현과 6기정·10정은 둘 중 하나만 ON 가능 (JS에서 상호 배타 처리)
+*/
+
+/* 군·현 토글 OFF: 줌 레벨 무관 강제 숨김 */
+.map-container[data-layer-gunhyeon="off"] svg #군 { display: none !important; }
+.map-container[data-layer-gunhyeon="off"] svg #현 { display: none !important; }
+
+/* 6기정·10정 토글 OFF: 줌 레벨 무관 강제 숨김 */
+.map-container[data-layer-jeong="off"] svg #_10정 { display: none !important; }
+.map-container[data-layer-jeong="off"] svg #_6기정 { display: none !important; }
+.map-container[data-layer-jeong="off"] svg #대성군 { display: none !important; }
+.map-container[data-layer-jeong="off"] svg #상성군 { display: none !important; }
+
+/* 주변국 토글 OFF: 발해, 안동도호부, 고구려인 숨김 */
+.map-container[data-layer-neighbors="off"] svg #발해 { display: none !important; }
+.map-container[data-layer-neighbors="off"] svg #안동도호부 { display: none !important; }
+.map-container[data-layer-neighbors="off"] svg #고구려인 { display: none !important; }
+
+/* 속국 토글 OFF: 우산국, 탐라국 숨김 */
+.map-container[data-layer-vassals="off"] svg #속국 { display: none !important; }
+
+/* 발해 국경 토글 OFF: 발해 국경선 + 신라 북방 국경선 숨김 */
+.map-container[data-layer-balhae-border="off"] svg #발해_국경선 { display: none !important; }
+.map-container[data-layer-balhae-border="off"] svg #신라_북방_국경선 { display: none !important; }
+
+/* =========================================================
+   좌측 패널 (검색바 + 검색결과/설명창)
+   ========================================================= */
+.side-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--panel-width);
+  height: 100%;
+  background: var(--surface);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(0);
+  transition: transform var(--transition);
+  z-index: 100;
+  border-right: 1px solid var(--border);
+}
+.side-panel.collapsed {
+  transform: translateX(-100%);
+}
+
+/* 검색바 */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 14px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  position: relative;
+  z-index: 2;
+}
+
+.search-input-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #f5f3ed;
+  border-radius: 999px;
+  transition: background var(--transition-fast), box-shadow var(--transition-fast);
+}
+.search-input-wrap:focus-within {
+  background: var(--surface);
+  box-shadow: 0 0 0 2px var(--accent) inset;
+}
+.search-icon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+#searchInput {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  min-width: 0;
+}
+#searchInput::placeholder { color: var(--text-muted); }
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  transition: background var(--transition-fast), color var(--transition-fast);
+  flex-shrink: 0;
+}
+.icon-btn:hover { background: #f0ede5; color: var(--text); }
+.icon-btn:active { background: #e8e4d9; }
+
+.clear-btn {
+  width: 22px;
+  height: 22px;
+  background: #d4d0c4;
+  color: var(--surface);
+}
+.clear-btn:hover {
+  background: var(--text-secondary);
+  color: var(--surface);
+}
+
+/* 패널 본문 영역 */
+.panel-body {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--surface);
+}
+.panel-body::-webkit-scrollbar { width: 8px; }
+.panel-body::-webkit-scrollbar-thumb {
+  background: #d4d0c4;
+  border-radius: 4px;
+}
+.panel-body::-webkit-scrollbar-thumb:hover { background: var(--border-strong); }
+
+.panel-mode {
+  padding: 8px 0;
+}
+
+/* === 검색 결과 === */
+.search-empty {
+  padding: 60px 24px;
+  text-align: center;
+  color: var(--text-muted);
+}
+.search-empty p { font-size: 14px; line-height: 1.6; }
+.search-hint {
+  margin-top: 8px;
+  font-size: 12px !important;
+  color: var(--text-muted);
+  letter-spacing: -0.2px;
+}
+
+.search-results {
+  list-style: none;
+}
+.search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  border-bottom: 1px solid #f4f1e8;
+}
+.search-result-item:hover { background: #faf8f1; }
+.search-result-item:active { background: #f4f1e8; }
+
+.result-cat-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 9px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--surface);
+  background: var(--text-secondary);
+  letter-spacing: -0.3px;
+  flex-shrink: 0;
+  min-width: 38px;
+}
+.result-cat-ju { background: var(--cat-ju); }
+.result-cat-sogyeong { background: var(--cat-sogyeong); }
+.result-cat-geumseong { background: var(--cat-geumseong); }
+.result-cat-gun { background: var(--cat-gun); }
+.result-cat-hyeon { background: var(--cat-hyeon); }
+.result-cat-jeong10 { background: var(--cat-jeong10); }
+.result-cat-gijeong6 { background: var(--cat-gijeong6); }
+.result-cat-vassal { background: var(--cat-vassal); }
+.result-cat-neighbor { background: var(--cat-neighbor); }
+
+.result-text { flex: 1; min-width: 0; }
+.result-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+.result-name mark {
+  background: #fff4cc;
+  color: var(--text);
+  font-weight: 800;
+}
+.result-hanja {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+
+.no-results {
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* === 상세 설명 === */
+.detail-mode {
+  padding: 24px 22px 32px;
+}
+.detail-category-tag {
+  display: inline-block;
+  padding: 4px 11px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--surface);
+  letter-spacing: -0.3px;
+  margin-bottom: 14px;
+  background: var(--text-secondary);
+}
+.detail-category-tag.cat-ju { background: var(--cat-ju); }
+.detail-category-tag.cat-sogyeong { background: var(--cat-sogyeong); }
+.detail-category-tag.cat-geumseong { background: var(--cat-geumseong); }
+.detail-category-tag.cat-gun { background: var(--cat-gun); }
+.detail-category-tag.cat-hyeon { background: var(--cat-hyeon); }
+.detail-category-tag.cat-jeong10 { background: var(--cat-jeong10); }
+.detail-category-tag.cat-gijeong6 { background: var(--cat-gijeong6); }
+.detail-category-tag.cat-vassal { background: var(--cat-vassal); }
+.detail-category-tag.cat-neighbor { background: var(--cat-neighbor); }
+
+.detail-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+}
+.detail-hanja {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.detail-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 22px 0;
+}
+.detail-content {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.detail-placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 28px 0;
+  text-align: center;
+}
+
+/* =========================================================
+   패널 토글 버튼 (항상 표시, 패널 가장자리에 부착)
+   ========================================================= */
+.panel-toggle-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 56px;
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+  border-radius: 0 6px 6px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  z-index: 101;  /* 패널보다 위 */
+  transition: background var(--transition-fast), left var(--transition);
+  left: 0;
+}
+/* 패널이 열렸을 때: 패널 오른쪽 가장자리에 부착, 왼쪽으로 둥근 모서리 */
+.side-panel:not(.collapsed) ~ .panel-toggle-btn {
+  left: var(--panel-width);
+  border-radius: 0 6px 6px 0;
+}
+.panel-toggle-btn:hover {
+  background: #faf8f1;
+  color: var(--text);
+}
+.panel-toggle-btn .toggle-icon-open,
+.panel-toggle-btn .toggle-icon-close {
+  position: absolute;
+}
+/* 닫힘 상태: open 아이콘(>) 표시 */
+.panel-toggle-btn .toggle-icon-close { display: none; }
+/* 열림 상태: close 아이콘(<) 표시 */
+.side-panel:not(.collapsed) ~ .panel-toggle-btn .toggle-icon-open { display: none; }
+.side-panel:not(.collapsed) ~ .panel-toggle-btn .toggle-icon-close { display: block; }
+
+/* =========================================================
+   줌 컨트롤
+   ========================================================= */
+.zoom-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  z-index: 50;
+}
+.zoom-btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  transition: background var(--transition-fast);
+}
+.zoom-btn:hover { background: #f5f3ed; }
+.zoom-btn:active { background: #ebe7da; }
+.zoom-btn:disabled {
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+.zoom-btn:disabled:hover { background: transparent; }
+.zoom-divider {
+  height: 1px;
+  background: var(--border);
+}
+
+/* =========================================================
+   레이어 토글 (우측 하단)
+   ========================================================= */
+.layer-controls {
+  position: absolute;
+  bottom: 24px;
+  right: 20px;
+  background: var(--surface);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: 10px 10px;
+  z-index: 50;
+  min-width: 168px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+}
+.layer-group {
+  padding: 4px 0 6px;
+}
+.layer-group + .layer-group {
+  border-top: 1px solid var(--border);
+  margin-top: 4px;
+  padding-top: 8px;
+}
+.layer-group-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.4px;
+  padding: 2px 6px 6px;
+  text-transform: uppercase;
+}
+.layer-btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: background var(--transition-fast), color var(--transition-fast);
+  text-align: left;
+}
+.layer-btn:hover { background: #f5f3ed; color: var(--text); }
+.layer-btn.active { color: var(--text); }
+.layer-btn.active .layer-swatch { box-shadow: 0 0 0 2px var(--accent); }
+
+.layer-swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  transition: box-shadow var(--transition-fast), opacity var(--transition-fast);
+}
+.layer-btn:not(.active) .layer-swatch { opacity: 0.4; }
+
+.swatch-ju {
+  background: repeating-linear-gradient(45deg, #bababa, #bababa 2px, transparent 2px, transparent 5px);
+}
+.swatch-region {
+  background: linear-gradient(135deg, #9ab8d6, #5a85b3);
+}
+.swatch-admin {
+  background: linear-gradient(135deg, #c9b78a, #97804c);
+}
+.swatch-gun-hyeon {
+  background: linear-gradient(135deg, #4a8a5a, #2a6b3d);
+}
+.swatch-jeong {
+  background: linear-gradient(135deg, #d68863, #b54b3a);
+}
+.swatch-balhae-border {
+  background: repeating-linear-gradient(90deg, #8b6a3a, #8b6a3a 3px, transparent 3px, transparent 6px);
+}
+.swatch-neighbors {
+  background: linear-gradient(135deg, #888, #444);
+}
+.swatch-vassals {
+  background: linear-gradient(135deg, #d4b87a, #826a3a);
+}
+
+/* =========================================================
+   좌측 하단 줌 레벨 인디케이터
+   ========================================================= */
+.zoom-indicator {
+  position: absolute;
+  bottom: 24px;
+  left: 20px;
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 8px 16px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 50;
+  transition: left var(--transition);
+}
+.side-panel:not(.collapsed) ~ .zoom-indicator {
+  left: calc(var(--panel-width) + 20px);
+}
+.zoom-level-label {
+  color: var(--text-muted);
+  letter-spacing: -0.2px;
+}
+.zoom-level-value {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* =========================================================
+   로딩
+   ========================================================= */
+.map-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: var(--map-bg);
+  z-index: 200;
+  transition: opacity 0.3s ease;
+}
+.map-loading.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.loading-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.map-loading p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   반응형 (모바일)
+   ========================================================= */
+@media (max-width: 640px) {
+  :root { --panel-width: 100%; }
+  .layer-controls {
+    bottom: 16px;
+    right: 16px;
+    padding: 10px 8px;
+    min-width: 138px;
+  }
+  .zoom-controls {
+    top: 16px;
+    right: 16px;
+  }
+  .zoom-indicator {
+    bottom: 16px;
+    left: 16px;
+  }
+  .side-panel:not(.collapsed) ~ .zoom-indicator {
+    display: none;
+  }
+  /* 모바일에서 패널이 100% 너비이므로 토글 버튼은 패널 안 우측 상단으로 이동 */
+  .side-panel:not(.collapsed) ~ .panel-toggle-btn {
+    left: auto;
+    right: 8px;
+    top: 14px;
+    transform: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: none;
+  }
+  .side-panel:not(.collapsed) ~ .panel-toggle-btn:hover {
+    background: #f0ede5;
+  }
+}

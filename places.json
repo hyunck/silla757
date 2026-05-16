@@ -1,0 +1,3082 @@
+[
+  {
+    "name": "명주",
+    "hanja": "溟州",
+    "category": "ju",
+    "x": 1173.1,
+    "y": 1690.3
+  },
+  {
+    "name": "삭주",
+    "hanja": "朔州",
+    "category": "ju",
+    "x": 895.3,
+    "y": 1648.7
+  },
+  {
+    "name": "한주",
+    "hanja": "漢州",
+    "category": "ju",
+    "x": 773.0,
+    "y": 1766.6
+  },
+  {
+    "name": "웅주",
+    "hanja": "熊州",
+    "category": "ju",
+    "x": 730.3,
+    "y": 2085.3
+  },
+  {
+    "name": "전주",
+    "hanja": "全州",
+    "category": "ju",
+    "x": 748.3,
+    "y": 2288.7
+  },
+  {
+    "name": "무주",
+    "hanja": "武州",
+    "category": "ju",
+    "x": 687.0,
+    "y": 2509.6
+  },
+  {
+    "name": "강주",
+    "hanja": "康州",
+    "category": "ju",
+    "x": 980.7,
+    "y": 2483.7
+  },
+  {
+    "name": "상주",
+    "hanja": "尙州",
+    "category": "ju",
+    "x": 995.5,
+    "y": 2097.1
+  },
+  {
+    "name": "양주",
+    "hanja": "良州",
+    "category": "ju",
+    "x": 1232.2,
+    "y": 2412.0
+  },
+  {
+    "name": "김해경",
+    "hanja": "金海京",
+    "category": "sogyeong",
+    "x": 1174.2,
+    "y": 2457.7
+  },
+  {
+    "name": "남원경",
+    "hanja": "南原京",
+    "category": "sogyeong",
+    "x": 801.5,
+    "y": 2411.6
+  },
+  {
+    "name": "서원경",
+    "hanja": "西原京",
+    "category": "sogyeong",
+    "x": 822.5,
+    "y": 2038.3
+  },
+  {
+    "name": "중원경",
+    "hanja": "中原京",
+    "category": "sogyeong",
+    "x": 923.8,
+    "y": 1917.1
+  },
+  {
+    "name": "북원경",
+    "hanja": "北原京",
+    "category": "sogyeong",
+    "x": 935.6,
+    "y": 1823.2
+  },
+  {
+    "name": "금성",
+    "hanja": "金城",
+    "category": "geumseong",
+    "x": 1280.1,
+    "y": 2287.8
+  },
+  {
+    "name": "벌력천정",
+    "hanja": "伐力川停",
+    "category": "jeong10",
+    "x": 933.5,
+    "y": 1710.2
+  },
+  {
+    "name": "이화혜정",
+    "hanja": "伊火兮停",
+    "category": "jeong10",
+    "x": 1220.5,
+    "y": 2121.1
+  },
+  {
+    "name": "남천정",
+    "hanja": "南川停",
+    "category": "jeong10",
+    "x": 836.5,
+    "y": 1836.4
+  },
+  {
+    "name": "골내근정",
+    "hanja": "骨乃斤停",
+    "category": "jeong10",
+    "x": 879.4,
+    "y": 1830.1
+  },
+  {
+    "name": "고량부리정",
+    "hanja": "古良夫里停",
+    "category": "jeong10",
+    "x": 658.8,
+    "y": 2093.4
+  },
+  {
+    "name": "거사물정",
+    "hanja": "居斯勿停",
+    "category": "jeong10",
+    "x": 849.8,
+    "y": 2365.4
+  },
+  {
+    "name": "미다부리정",
+    "hanja": "未多夫里停",
+    "category": "jeong10",
+    "x": 649.1,
+    "y": 2553.6
+  },
+  {
+    "name": "음리화정",
+    "hanja": "音里火停",
+    "category": "jeong10",
+    "x": 975.2,
+    "y": 2130.8
+  },
+  {
+    "name": "소삼정",
+    "hanja": "召參停",
+    "category": "jeong10",
+    "x": 1059.4,
+    "y": 2470.8
+  },
+  {
+    "name": "삼량화정",
+    "hanja": "三良火停",
+    "category": "jeong10",
+    "x": 1073.8,
+    "y": 2326.1
+  },
+  {
+    "name": "동기정",
+    "hanja": "東畿停",
+    "category": "gijeong6",
+    "x": 1323.2,
+    "y": 2312.7
+  },
+  {
+    "name": "중기정",
+    "hanja": "中畿停",
+    "category": "gijeong6",
+    "x": 1261.6,
+    "y": 2289.7
+  },
+  {
+    "name": "남기정",
+    "hanja": "南畿停",
+    "category": "gijeong6",
+    "x": 1291.6,
+    "y": 2294.7
+  },
+  {
+    "name": "막야정",
+    "hanja": "莫耶停",
+    "category": "gijeong6",
+    "x": 1316.6,
+    "y": 2269.7
+  },
+  {
+    "name": "서기정",
+    "hanja": "西畿停",
+    "category": "gijeong6",
+    "x": 1258.6,
+    "y": 2270.7
+  },
+  {
+    "name": "북기정",
+    "hanja": "北畿停",
+    "category": "gijeong6",
+    "x": 1275.8,
+    "y": 2259.4
+  },
+  {
+    "name": "우산국",
+    "hanja": "于山國",
+    "category": "vassal",
+    "x": 1755.9,
+    "y": 1767.5
+  },
+  {
+    "name": "탐라국",
+    "hanja": "耽羅國",
+    "category": "vassal",
+    "x": 566.4,
+    "y": 3049.8
+  },
+  {
+    "name": "안동도호부",
+    "hanja": "安東都護府",
+    "category": "neighbor",
+    "x": 19.1,
+    "y": 718.4
+  },
+  {
+    "name": "고구려인",
+    "hanja": "高句麗人",
+    "category": "neighbor",
+    "x": 290.6,
+    "y": 1096.2
+  },
+  {
+    "name": "발해",
+    "hanja": "渤海",
+    "category": "neighbor",
+    "x": 831.8,
+    "y": 407.1
+  },
+  {
+    "name": "예천군",
+    "hanja": "醴泉郡",
+    "category": "gun",
+    "x": 1083.3,
+    "y": 2026.4
+  },
+  {
+    "name": "삼년군",
+    "hanja": "三年郡",
+    "category": "gun",
+    "x": 906.7,
+    "y": 2074.0
+  },
+  {
+    "name": "고령군",
+    "hanja": "古寧郡",
+    "category": "gun",
+    "x": 1025.8,
+    "y": 2064.2
+  },
+  {
+    "name": "화령군",
+    "hanja": "化寧郡",
+    "category": "gun",
+    "x": 963.5,
+    "y": 2093.4
+  },
+  {
+    "name": "관성군",
+    "hanja": "管城郡",
+    "category": "gun",
+    "x": 871.6,
+    "y": 2133.0
+  },
+  {
+    "name": "영동군",
+    "hanja": "永同郡",
+    "category": "gun",
+    "x": 927.7,
+    "y": 2177.2
+  },
+  {
+    "name": "개령군",
+    "hanja": "開寧郡",
+    "category": "gun",
+    "x": 1018.6,
+    "y": 2184.2
+  },
+  {
+    "name": "숭선군",
+    "hanja": "嵩善郡",
+    "category": "gun",
+    "x": 1056.7,
+    "y": 2157.9
+  },
+  {
+    "name": "문소군",
+    "hanja": "聞韶郡",
+    "category": "gun",
+    "x": 1146.4,
+    "y": 2149.7
+  },
+  {
+    "name": "고창군",
+    "hanja": "古昌郡",
+    "category": "gun",
+    "x": 1154.9,
+    "y": 2050.0
+  },
+  {
+    "name": "분령군",
+    "hanja": "分嶺郡",
+    "category": "gun",
+    "x": 815.8,
+    "y": 2579.9
+  },
+  {
+    "name": "보성군",
+    "hanja": "寶城郡",
+    "category": "gun",
+    "x": 738.4,
+    "y": 2620.9
+  },
+  {
+    "name": "추성군",
+    "hanja": "秋成郡",
+    "category": "gun",
+    "x": 707.8,
+    "y": 2451.3
+  },
+  {
+    "name": "영암군",
+    "hanja": "靈巖郡",
+    "category": "gun",
+    "x": 642.5,
+    "y": 2611.8
+  },
+  {
+    "name": "반남군",
+    "hanja": "潘南郡",
+    "category": "gun",
+    "x": 626.5,
+    "y": 2572.6
+  },
+  {
+    "name": "갑성군",
+    "hanja": "岬城郡",
+    "category": "gun",
+    "x": 660.2,
+    "y": 2424.9
+  },
+  {
+    "name": "무령군",
+    "hanja": "武靈郡",
+    "category": "gun",
+    "x": 591.4,
+    "y": 2450.0
+  },
+  {
+    "name": "승평군",
+    "hanja": "昇平郡",
+    "category": "gun",
+    "x": 847.9,
+    "y": 2564.1
+  },
+  {
+    "name": "곡성군",
+    "hanja": "谷城郡",
+    "category": "gun",
+    "x": 789.0,
+    "y": 2460.1
+  },
+  {
+    "name": "능성군",
+    "hanja": "陵城郡",
+    "category": "gun",
+    "x": 711.5,
+    "y": 2544.3
+  },
+  {
+    "name": "금산군",
+    "hanja": "錦山郡",
+    "category": "gun",
+    "x": 648.9,
+    "y": 2544.8
+  },
+  {
+    "name": "양무군",
+    "hanja": "陽武郡",
+    "category": "gun",
+    "x": 666.5,
+    "y": 2636.4
+  },
+  {
+    "name": "무안군",
+    "hanja": "務安郡",
+    "category": "gun",
+    "x": 581.1,
+    "y": 2554.4
+  },
+  {
+    "name": "뇌산군",
+    "hanja": "牢山郡",
+    "category": "gun",
+    "x": 528.7,
+    "y": 2694.4
+  },
+  {
+    "name": "압해군",
+    "hanja": "壓海郡",
+    "category": "gun",
+    "x": 537.0,
+    "y": 2585.1
+  },
+  {
+    "name": "괴양군",
+    "hanja": "槐壤郡",
+    "category": "gun",
+    "x": 922.5,
+    "y": 1969.7
+  },
+  {
+    "name": "소천군",
+    "hanja": "泝川郡",
+    "category": "gun",
+    "x": 853.9,
+    "y": 1808.3
+  },
+  {
+    "name": "흑양군",
+    "hanja": "黑壤郡",
+    "category": "gun",
+    "x": 813.0,
+    "y": 1962.6
+  },
+  {
+    "name": "개산군",
+    "hanja": "介山郡",
+    "category": "gun",
+    "x": 825.0,
+    "y": 1902.4
+  },
+  {
+    "name": "백성군",
+    "hanja": "白城郡",
+    "category": "gun",
+    "x": 790.7,
+    "y": 1910.8
+  },
+  {
+    "name": "수성군",
+    "hanja": "水城郡",
+    "category": "gun",
+    "x": 714.2,
+    "y": 1843.6
+  },
+  {
+    "name": "당은군",
+    "hanja": "唐恩郡",
+    "category": "gun",
+    "x": 674.0,
+    "y": 1848.5
+  },
+  {
+    "name": "율진군",
+    "hanja": "栗津郡",
+    "category": "gun",
+    "x": 721.3,
+    "y": 1782.6
+  },
+  {
+    "name": "장구군",
+    "hanja": "獐口郡",
+    "category": "gun",
+    "x": 675.0,
+    "y": 1815.8
+  },
+  {
+    "name": "장제군",
+    "hanja": "長堤郡",
+    "category": "gun",
+    "x": 651.1,
+    "y": 1745.1
+  },
+  {
+    "name": "한양군",
+    "hanja": "漢陽郡",
+    "category": "gun",
+    "x": 715.7,
+    "y": 1733.0
+  },
+  {
+    "name": "내소군",
+    "hanja": "來蘇郡",
+    "category": "gun",
+    "x": 731.7,
+    "y": 1670.9
+  },
+  {
+    "name": "교하군",
+    "hanja": "交河郡",
+    "category": "gun",
+    "x": 657.1,
+    "y": 1677.6
+  },
+  {
+    "name": "견성군",
+    "hanja": "堅城郡",
+    "category": "gun",
+    "x": 774.5,
+    "y": 1644.3
+  },
+  {
+    "name": "철성군",
+    "hanja": "鐵城郡",
+    "category": "gun",
+    "x": 770.4,
+    "y": 1517.1
+  },
+  {
+    "name": "부평군",
+    "hanja": "富平郡",
+    "category": "gun",
+    "x": 821.0,
+    "y": 1518.6
+  },
+  {
+    "name": "토산군",
+    "hanja": "兎山郡",
+    "category": "gun",
+    "x": 674.9,
+    "y": 1524.0
+  },
+  {
+    "name": "우봉군",
+    "hanja": "牛峯郡",
+    "category": "gun",
+    "x": 611.4,
+    "y": 1532.8
+  },
+  {
+    "name": "송악군",
+    "hanja": "松岳郡",
+    "category": "gun",
+    "x": 618.1,
+    "y": 1607.3
+  },
+  {
+    "name": "개성군",
+    "hanja": "開城郡",
+    "category": "gun",
+    "x": 579.2,
+    "y": 1612.5
+  },
+  {
+    "name": "해구군",
+    "hanja": "海口郡",
+    "category": "gun",
+    "x": 594.5,
+    "y": 1676.1
+  },
+  {
+    "name": "영풍군",
+    "hanja": "永豐郡",
+    "category": "gun",
+    "x": 580.5,
+    "y": 1514.4
+  },
+  {
+    "name": "해고군",
+    "hanja": "海皐郡",
+    "category": "gun",
+    "x": 509.8,
+    "y": 1633.9
+  },
+  {
+    "name": "폭지군",
+    "hanja": "瀑池郡",
+    "category": "gun",
+    "x": 405.5,
+    "y": 1585.3
+  },
+  {
+    "name": "중반군",
+    "hanja": "重盤郡",
+    "category": "gun",
+    "x": 320.3,
+    "y": 1472.0
+  },
+  {
+    "name": "취성군",
+    "hanja": "取城郡",
+    "category": "gun",
+    "x": 426.3,
+    "y": 1384.0
+  },
+  {
+    "name": "서암군",
+    "hanja": "栖嵒郡",
+    "category": "gun",
+    "x": 442.3,
+    "y": 1440.0
+  },
+  {
+    "name": "오관군",
+    "hanja": "五關郡",
+    "category": "gun",
+    "x": 515.3,
+    "y": 1450.0
+  },
+  {
+    "name": "나제군",
+    "hanja": "奈堤郡",
+    "category": "gun",
+    "x": 1021.2,
+    "y": 1887.0
+  },
+  {
+    "name": "급산군",
+    "hanja": "岌山郡",
+    "category": "gun",
+    "x": 1111.7,
+    "y": 1928.2
+  },
+  {
+    "name": "가평군",
+    "hanja": "嘉平郡",
+    "category": "gun",
+    "x": 851.9,
+    "y": 1642.9
+  },
+  {
+    "name": "양록군",
+    "hanja": "楊麓郡",
+    "category": "gun",
+    "x": 958.7,
+    "y": 1563.1
+  },
+  {
+    "name": "낭천군",
+    "hanja": "狼川郡",
+    "category": "gun",
+    "x": 914.8,
+    "y": 1547.7
+  },
+  {
+    "name": "대양군",
+    "hanja": "大楊郡",
+    "category": "gun",
+    "x": 968.2,
+    "y": 1436.8
+  },
+  {
+    "name": "익성군",
+    "hanja": "益城郡",
+    "category": "gun",
+    "x": 847.4,
+    "y": 1468.9
+  },
+  {
+    "name": "나령군",
+    "hanja": "奈靈郡",
+    "category": "gun",
+    "x": 1127.7,
+    "y": 1965.4
+  },
+  {
+    "name": "기성군",
+    "hanja": "岐城郡",
+    "category": "gun",
+    "x": 887.1,
+    "y": 1436.3
+  },
+  {
+    "name": "연성군",
+    "hanja": "連城郡",
+    "category": "gun",
+    "x": 884.1,
+    "y": 1382.6
+  },
+  {
+    "name": "삭정군",
+    "hanja": "朔庭郡",
+    "category": "gun",
+    "x": 855.8,
+    "y": 1281.4
+  },
+  {
+    "name": "정천군",
+    "hanja": "井泉郡",
+    "category": "gun",
+    "x": 805.0,
+    "y": 1233.4
+  },
+  {
+    "name": "남해군",
+    "hanja": "南海郡",
+    "category": "gun",
+    "x": 947.1,
+    "y": 2595.7
+  },
+  {
+    "name": "하동군",
+    "hanja": "河東郡",
+    "category": "gun",
+    "x": 920.7,
+    "y": 2533.3
+  },
+  {
+    "name": "고성군",
+    "hanja": "固城郡",
+    "category": "gun",
+    "x": 1059.0,
+    "y": 2552.3
+  },
+  {
+    "name": "함안군",
+    "hanja": "咸安郡",
+    "category": "gun",
+    "x": 1076.8,
+    "y": 2454.4
+  },
+  {
+    "name": "거제군",
+    "hanja": "巨濟郡",
+    "category": "gun",
+    "x": 1113.6,
+    "y": 2573.9
+  },
+  {
+    "name": "궐성군",
+    "hanja": "闕城郡",
+    "category": "gun",
+    "x": 951.7,
+    "y": 2453.9
+  },
+  {
+    "name": "천령군",
+    "hanja": "天嶺郡",
+    "category": "gun",
+    "x": 900.4,
+    "y": 2388.9
+  },
+  {
+    "name": "거창군",
+    "hanja": "居昌郡",
+    "category": "gun",
+    "x": 951.7,
+    "y": 2323.9
+  },
+  {
+    "name": "강양군",
+    "hanja": "江陽郡",
+    "category": "gun",
+    "x": 1008.9,
+    "y": 2353.9
+  },
+  {
+    "name": "성산군",
+    "hanja": "星山郡",
+    "category": "gun",
+    "x": 1059.2,
+    "y": 2297.0
+  },
+  {
+    "name": "동래군",
+    "hanja": "東萊郡",
+    "category": "gun",
+    "x": 1251.8,
+    "y": 2469.9
+  },
+  {
+    "name": "의안군",
+    "hanja": "義安郡",
+    "category": "gun",
+    "x": 1139.5,
+    "y": 2443.9
+  },
+  {
+    "name": "밀성군",
+    "hanja": "密城郡",
+    "category": "gun",
+    "x": 1177.5,
+    "y": 2391.8
+  },
+  {
+    "name": "화왕군",
+    "hanja": "火王郡",
+    "category": "gun",
+    "x": 1102.0,
+    "y": 2379.0
+  },
+  {
+    "name": "수창군",
+    "hanja": "壽昌郡",
+    "category": "gun",
+    "x": 1136.1,
+    "y": 2293.9
+  },
+  {
+    "name": "장산군",
+    "hanja": "獐山郡",
+    "category": "gun",
+    "x": 1170.4,
+    "y": 2302.0
+  },
+  {
+    "name": "임고군",
+    "hanja": "臨臯郡",
+    "category": "gun",
+    "x": 1221.7,
+    "y": 2221.6
+  },
+  {
+    "name": "동안군",
+    "hanja": "東安郡",
+    "category": "gun",
+    "x": 1309.5,
+    "y": 2421.7
+  },
+  {
+    "name": "임관군",
+    "hanja": "臨關郡",
+    "category": "gun",
+    "x": 1309.2,
+    "y": 2331.0
+  },
+  {
+    "name": "의창군",
+    "hanja": "義昌郡",
+    "category": "gun",
+    "x": 1316.9,
+    "y": 2197.4
+  },
+  {
+    "name": "대성군",
+    "hanja": "大城郡",
+    "category": "gun",
+    "x": 1306.7,
+    "y": 2294.1
+  },
+  {
+    "name": "상성군",
+    "hanja": "商城郡",
+    "category": "gun",
+    "x": 1275.7,
+    "y": 2275.8
+  },
+  {
+    "name": "김제군",
+    "hanja": "金堤郡",
+    "category": "gun",
+    "x": 694.9,
+    "y": 2302.5
+  },
+  {
+    "name": "대산군",
+    "hanja": "大山郡",
+    "category": "gun",
+    "x": 712.4,
+    "y": 2361.1
+  },
+  {
+    "name": "고부군",
+    "hanja": "古阜郡",
+    "category": "gun",
+    "x": 656.6,
+    "y": 2351.3
+  },
+  {
+    "name": "진례군",
+    "hanja": "進禮郡",
+    "category": "gun",
+    "x": 842.5,
+    "y": 2205.5
+  },
+  {
+    "name": "덕은군",
+    "hanja": "德殷郡",
+    "category": "gun",
+    "x": 768.0,
+    "y": 2188.5
+  },
+  {
+    "name": "임피군",
+    "hanja": "臨陂郡",
+    "category": "gun",
+    "x": 677.9,
+    "y": 2241.8
+  },
+  {
+    "name": "순화군",
+    "hanja": "淳化郡",
+    "category": "gun",
+    "x": 747.9,
+    "y": 2422.1
+  },
+  {
+    "name": "임실군",
+    "hanja": "任實郡",
+    "category": "gun",
+    "x": 779.9,
+    "y": 2353.2
+  },
+  {
+    "name": "벽계군",
+    "hanja": "壁谿郡",
+    "category": "gun",
+    "x": 871.9,
+    "y": 2318.6
+  },
+  {
+    "name": "금마군",
+    "hanja": "金馬郡",
+    "category": "gun",
+    "x": 729.1,
+    "y": 2233.1
+  },
+  {
+    "name": "야성군",
+    "hanja": "野城郡",
+    "category": "gun",
+    "x": 1321.1,
+    "y": 2098.9
+  },
+  {
+    "name": "유린군",
+    "hanja": "有鄰郡",
+    "category": "gun",
+    "x": 1309.3,
+    "y": 2058.7
+  },
+  {
+    "name": "울진군",
+    "hanja": "蔚珍郡",
+    "category": "gun",
+    "x": 1301.8,
+    "y": 1923.5
+  },
+  {
+    "name": "나성군",
+    "hanja": "奈城郡",
+    "category": "gun",
+    "x": 1100.2,
+    "y": 1856.3
+  },
+  {
+    "name": "삼척군",
+    "hanja": "三陟郡",
+    "category": "gun",
+    "x": 1253.7,
+    "y": 1778.2
+  },
+  {
+    "name": "금양군",
+    "hanja": "金壤郡",
+    "category": "gun",
+    "x": 935.0,
+    "y": 1318.3
+  },
+  {
+    "name": "대록군",
+    "hanja": "大麓郡",
+    "category": "gun",
+    "x": 776.3,
+    "y": 1985.4
+  },
+  {
+    "name": "가림군",
+    "hanja": "嘉林郡",
+    "category": "gun",
+    "x": 696.0,
+    "y": 2177.7
+  },
+  {
+    "name": "부여군",
+    "hanja": "扶餘郡",
+    "category": "gun",
+    "x": 703.7,
+    "y": 2138.4
+  },
+  {
+    "name": "서림군",
+    "hanja": "西林郡",
+    "category": "gun",
+    "x": 640.4,
+    "y": 2206.3
+  },
+  {
+    "name": "이산군",
+    "hanja": "伊山郡",
+    "category": "gun",
+    "x": 629.1,
+    "y": 2016.1
+  },
+  {
+    "name": "임성군",
+    "hanja": "任城郡",
+    "category": "gun",
+    "x": 676.7,
+    "y": 2029.3
+  },
+  {
+    "name": "혜성군",
+    "hanja": "槥城郡",
+    "category": "gun",
+    "x": 639.2,
+    "y": 1972.8
+  },
+  {
+    "name": "부성군",
+    "hanja": "富城郡",
+    "category": "gun",
+    "x": 583.8,
+    "y": 1988.1
+  },
+  {
+    "name": "황산군",
+    "hanja": "黃山郡",
+    "category": "gun",
+    "x": 769.9,
+    "y": 2156.7
+  },
+  {
+    "name": "비풍군",
+    "hanja": "比豐郡",
+    "category": "gun",
+    "x": 829.5,
+    "y": 2106.9
+  },
+  {
+    "name": "결성군",
+    "hanja": "潔城郡",
+    "category": "gun",
+    "x": 610.9,
+    "y": 2062.2
+  },
+  {
+    "name": "연산군",
+    "hanja": "燕山郡",
+    "category": "gun",
+    "x": 846.4,
+    "y": 2074.2
+  },
+  {
+    "name": "탕정군",
+    "hanja": "湯井郡",
+    "category": "gun",
+    "x": 719.4,
+    "y": 1993.0
+  },
+  {
+    "name": "가수현",
+    "hanja": "嘉壽縣",
+    "category": "hyeon",
+    "x": 1007.5,
+    "y": 2423.2
+  },
+  {
+    "name": "굴촌현",
+    "hanja": "屈村縣",
+    "category": "hyeon",
+    "x": 950.5,
+    "y": 2485.7
+  },
+  {
+    "name": "평산현",
+    "hanja": "平山縣",
+    "category": "hyeon",
+    "x": 947.5,
+    "y": 2619.6
+  },
+  {
+    "name": "난포현",
+    "hanja": "蘭浦縣",
+    "category": "hyeon",
+    "x": 986.6,
+    "y": 2611.0
+  },
+  {
+    "name": "성량현",
+    "hanja": "省良縣",
+    "category": "hyeon",
+    "x": 944.5,
+    "y": 2553.8
+  },
+  {
+    "name": "하읍현",
+    "hanja": "河邑縣",
+    "category": "hyeon",
+    "x": 954.5,
+    "y": 2535.8
+  },
+  {
+    "name": "악양현",
+    "hanja": "嶽陽縣",
+    "category": "hyeon",
+    "x": 908.5,
+    "y": 2498.8
+  },
+  {
+    "name": "사수현",
+    "hanja": "泗水縣",
+    "category": "hyeon",
+    "x": 1012.3,
+    "y": 2520.8
+  },
+  {
+    "name": "상선현",
+    "hanja": "尙善縣",
+    "category": "hyeon",
+    "x": 1043.3,
+    "y": 2522.8
+  },
+  {
+    "name": "문화량현",
+    "hanja": "蚊火良縣",
+    "category": "hyeon",
+    "x": 1027.5,
+    "y": 2543.8
+  },
+  {
+    "name": "현무현",
+    "hanja": "玄武縣",
+    "category": "hyeon",
+    "x": 1063.5,
+    "y": 2475.8
+  },
+  {
+    "name": "의령현",
+    "hanja": "宜寧縣",
+    "category": "hyeon",
+    "x": 1049.5,
+    "y": 2448.8
+  },
+  {
+    "name": "아주현",
+    "hanja": "鵝洲縣",
+    "category": "hyeon",
+    "x": 1159.1,
+    "y": 2580.9
+  },
+  {
+    "name": "명진현",
+    "hanja": "溟珍縣",
+    "category": "hyeon",
+    "x": 1132.4,
+    "y": 2593.8
+  },
+  {
+    "name": "남수현",
+    "hanja": "南垂縣",
+    "category": "hyeon",
+    "x": 1141.4,
+    "y": 2622.8
+  },
+  {
+    "name": "산음현",
+    "hanja": "山陰縣",
+    "category": "hyeon",
+    "x": 954.7,
+    "y": 2422.2
+  },
+  {
+    "name": "단읍현",
+    "hanja": "丹邑縣",
+    "category": "hyeon",
+    "x": 981.7,
+    "y": 2419.2
+  },
+  {
+    "name": "운봉현",
+    "hanja": "雲峰縣",
+    "category": "hyeon",
+    "x": 863.3,
+    "y": 2410.8
+  },
+  {
+    "name": "이안현",
+    "hanja": "利安縣",
+    "category": "hyeon",
+    "x": 930.3,
+    "y": 2346.8
+  },
+  {
+    "name": "여선현",
+    "hanja": "餘善縣",
+    "category": "hyeon",
+    "x": 928.4,
+    "y": 2310.4
+  },
+  {
+    "name": "함음현",
+    "hanja": "咸陰縣",
+    "category": "hyeon",
+    "x": 988.4,
+    "y": 2324.4
+  },
+  {
+    "name": "야로현",
+    "hanja": "冶爐縣",
+    "category": "hyeon",
+    "x": 1013.5,
+    "y": 2324.6
+  },
+  {
+    "name": "신복현",
+    "hanja": "新復縣",
+    "category": "hyeon",
+    "x": 1065.5,
+    "y": 2338.6
+  },
+  {
+    "name": "삼기현",
+    "hanja": "三岐縣",
+    "category": "hyeon",
+    "x": 982.5,
+    "y": 2378.6
+  },
+  {
+    "name": "팔계현",
+    "hanja": "八谿縣",
+    "category": "hyeon",
+    "x": 1041.5,
+    "y": 2373.6
+  },
+  {
+    "name": "의상현",
+    "hanja": "宜桑縣",
+    "category": "hyeon",
+    "x": 1065.5,
+    "y": 2398.6
+  },
+  {
+    "name": "수동현",
+    "hanja": "壽同縣",
+    "category": "hyeon",
+    "x": 1089.1,
+    "y": 2199.6
+  },
+  {
+    "name": "계자현",
+    "hanja": "谿子縣",
+    "category": "hyeon",
+    "x": 1072.8,
+    "y": 2222.6
+  },
+  {
+    "name": "신안현",
+    "hanja": "新安縣",
+    "category": "hyeon",
+    "x": 1048.8,
+    "y": 2254.6
+  },
+  {
+    "name": "도산현",
+    "hanja": "都山縣",
+    "category": "hyeon",
+    "x": 1013.8,
+    "y": 2271.6
+  },
+  {
+    "name": "이산현",
+    "hanja": "尼山縣",
+    "category": "hyeon",
+    "x": 751.0,
+    "y": 2142.0
+  },
+  {
+    "name": "청음현",
+    "hanja": "淸音縣",
+    "category": "hyeon",
+    "x": 709.3,
+    "y": 2073.8
+  },
+  {
+    "name": "순치현",
+    "hanja": "馴雉縣",
+    "category": "hyeon",
+    "x": 755.5,
+    "y": 2001.4
+  },
+  {
+    "name": "금지현",
+    "hanja": "金池縣",
+    "category": "hyeon",
+    "x": 771.8,
+    "y": 2031.0
+  },
+  {
+    "name": "한산현",
+    "hanja": "翰山縣",
+    "category": "hyeon",
+    "x": 663.3,
+    "y": 2153.4
+  },
+  {
+    "name": "마산현",
+    "hanja": "馬山縣",
+    "category": "hyeon",
+    "x": 675.3,
+    "y": 2197.6
+  },
+  {
+    "name": "석산현",
+    "hanja": "石山縣",
+    "category": "hyeon",
+    "x": 724.8,
+    "y": 2159.1
+  },
+  {
+    "name": "열성현",
+    "hanja": "悅城縣",
+    "category": "hyeon",
+    "x": 705.2,
+    "y": 2099.2
+  },
+  {
+    "name": "비인현",
+    "hanja": "庇仁縣",
+    "category": "hyeon",
+    "x": 625.7,
+    "y": 2185.5
+  },
+  {
+    "name": "남포현",
+    "hanja": "藍浦縣",
+    "category": "hyeon",
+    "x": 620.2,
+    "y": 2145.5
+  },
+  {
+    "name": "금무현",
+    "hanja": "今武縣",
+    "category": "hyeon",
+    "x": 653.6,
+    "y": 1994.8
+  },
+  {
+    "name": "목우현",
+    "hanja": "目牛縣",
+    "category": "hyeon",
+    "x": 610.6,
+    "y": 2038.8
+  },
+  {
+    "name": "고산현",
+    "hanja": "孤山縣",
+    "category": "hyeon",
+    "x": 687.5,
+    "y": 2007.6
+  },
+  {
+    "name": "청정현",
+    "hanja": "靑正縣",
+    "category": "hyeon",
+    "x": 666.0,
+    "y": 2089.8
+  },
+  {
+    "name": "신평현",
+    "hanja": "新平縣",
+    "category": "hyeon",
+    "x": 669.2,
+    "y": 1952.0
+  },
+  {
+    "name": "당진현",
+    "hanja": "唐津縣",
+    "category": "hyeon",
+    "x": 638.2,
+    "y": 1948.0
+  },
+  {
+    "name": "여읍현",
+    "hanja": "餘邑縣",
+    "category": "hyeon",
+    "x": 619.2,
+    "y": 1984.0
+  },
+  {
+    "name": "지육현",
+    "hanja": "地育縣",
+    "category": "hyeon",
+    "x": 579.6,
+    "y": 1959.8
+  },
+  {
+    "name": "소태현",
+    "hanja": "蘇泰縣",
+    "category": "hyeon",
+    "x": 550.6,
+    "y": 1988.8
+  },
+  {
+    "name": "진령현",
+    "hanja": "鎭嶺縣",
+    "category": "hyeon",
+    "x": 801.0,
+    "y": 2140.9
+  },
+  {
+    "name": "진동현",
+    "hanja": "珍同縣",
+    "category": "hyeon",
+    "x": 822.8,
+    "y": 2183.3
+  },
+  {
+    "name": "유성현",
+    "hanja": "儒城縣",
+    "category": "hyeon",
+    "x": 807.5,
+    "y": 2125.5
+  },
+  {
+    "name": "적조현",
+    "hanja": "赤鳥縣",
+    "category": "hyeon",
+    "x": 801.8,
+    "y": 2090.3
+  },
+  {
+    "name": "연기현",
+    "hanja": "燕岐縣",
+    "category": "hyeon",
+    "x": 791.5,
+    "y": 2074.3
+  },
+  {
+    "name": "신량현",
+    "hanja": "新良縣",
+    "category": "hyeon",
+    "x": 648.6,
+    "y": 2070.9
+  },
+  {
+    "name": "신읍현",
+    "hanja": "新邑縣",
+    "category": "hyeon",
+    "x": 623.6,
+    "y": 2104.8
+  },
+  {
+    "name": "매곡현",
+    "hanja": "昧谷縣",
+    "category": "hyeon",
+    "x": 881.4,
+    "y": 2076.1
+  },
+  {
+    "name": "기량현",
+    "hanja": "祁梁縣",
+    "category": "hyeon",
+    "x": 695.2,
+    "y": 1982.6
+  },
+  {
+    "name": "음봉현",
+    "hanja": "陰峯縣",
+    "category": "hyeon",
+    "x": 708.3,
+    "y": 1955.4
+  },
+  {
+    "name": "황무현",
+    "hanja": "黃武縣",
+    "category": "hyeon",
+    "x": 848.1,
+    "y": 1833.7
+  },
+  {
+    "name": "거서현",
+    "hanja": "巨黍縣",
+    "category": "hyeon",
+    "x": 791.8,
+    "y": 1848.0
+  },
+  {
+    "name": "황효현",
+    "hanja": "黃驍縣",
+    "category": "hyeon",
+    "x": 895.4,
+    "y": 1834.7
+  },
+  {
+    "name": "빈양현",
+    "hanja": "濱陽縣",
+    "category": "hyeon",
+    "x": 856.7,
+    "y": 1762.2
+  },
+  {
+    "name": "도서현",
+    "hanja": "都西縣",
+    "category": "hyeon",
+    "x": 877.7,
+    "y": 1971.7
+  },
+  {
+    "name": "음성현",
+    "hanja": "陰城縣",
+    "category": "hyeon",
+    "x": 894.1,
+    "y": 1935.6
+  },
+  {
+    "name": "음죽현",
+    "hanja": "陰竹縣",
+    "category": "hyeon",
+    "x": 875.6,
+    "y": 1873.1
+  },
+  {
+    "name": "적성현",
+    "hanja": "赤城縣",
+    "category": "hyeon",
+    "x": 785.4,
+    "y": 1889.9
+  },
+  {
+    "name": "사산현",
+    "hanja": "蛇山縣",
+    "category": "hyeon",
+    "x": 765.3,
+    "y": 1959.1
+  },
+  {
+    "name": "차성현",
+    "hanja": "車城縣",
+    "category": "hyeon",
+    "x": 721.3,
+    "y": 1917.0
+  },
+  {
+    "name": "진위현",
+    "hanja": "振威縣",
+    "category": "hyeon",
+    "x": 747.3,
+    "y": 1901.0
+  },
+  {
+    "name": "곡양현",
+    "hanja": "穀壤縣",
+    "category": "hyeon",
+    "x": 687.9,
+    "y": 1765.2
+  },
+  {
+    "name": "공암현",
+    "hanja": "孔巖縣",
+    "category": "hyeon",
+    "x": 686.5,
+    "y": 1741.0
+  },
+  {
+    "name": "소성현",
+    "hanja": "邵城縣",
+    "category": "hyeon",
+    "x": 644.5,
+    "y": 1775.0
+  },
+  {
+    "name": "김포현",
+    "hanja": "金浦縣",
+    "category": "hyeon",
+    "x": 656.7,
+    "y": 1723.3
+  },
+  {
+    "name": "동성현",
+    "hanja": "童城縣",
+    "category": "hyeon",
+    "x": 634.5,
+    "y": 1686.7
+  },
+  {
+    "name": "분진현",
+    "hanja": "分津縣",
+    "category": "hyeon",
+    "x": 629.5,
+    "y": 1702.7
+  },
+  {
+    "name": "수성현",
+    "hanja": "戍城縣",
+    "category": "hyeon",
+    "x": 623.2,
+    "y": 1718.7
+  },
+  {
+    "name": "황양현",
+    "hanja": "荒壤縣",
+    "category": "hyeon",
+    "x": 773.6,
+    "y": 1689.7
+  },
+  {
+    "name": "우왕현",
+    "hanja": "遇王縣",
+    "category": "hyeon",
+    "x": 691.3,
+    "y": 1725.8
+  },
+  {
+    "name": "중성현",
+    "hanja": "重城縣",
+    "category": "hyeon",
+    "x": 711.4,
+    "y": 1618.6
+  },
+  {
+    "name": "파평현",
+    "hanja": "波平縣",
+    "category": "hyeon",
+    "x": 690.9,
+    "y": 1631.2
+  },
+  {
+    "name": "봉성현",
+    "hanja": "峯城縣",
+    "category": "hyeon",
+    "x": 682.3,
+    "y": 1648.8
+  },
+  {
+    "name": "고봉현",
+    "hanja": "高烽縣",
+    "category": "hyeon",
+    "x": 687.3,
+    "y": 1696.7
+  },
+  {
+    "name": "사천현",
+    "hanja": "沙川縣",
+    "category": "hyeon",
+    "x": 745.2,
+    "y": 1638.0
+  },
+  {
+    "name": "동음현",
+    "hanja": "洞陰縣",
+    "category": "hyeon",
+    "x": 783.9,
+    "y": 1606.2
+  },
+  {
+    "name": "공성현",
+    "hanja": "功成縣",
+    "category": "hyeon",
+    "x": 755.3,
+    "y": 1571.3
+  },
+  {
+    "name": "동량현",
+    "hanja": "梁縣",
+    "category": "hyeon",
+    "x": 729.0,
+    "y": 1513.4
+  },
+  {
+    "name": "광평현",
+    "hanja": "廣平縣",
+    "category": "hyeon",
+    "x": 793.8,
+    "y": 1481.4
+  },
+  {
+    "name": "안협현",
+    "hanja": "安峽縣",
+    "category": "hyeon",
+    "x": 705.2,
+    "y": 1490.0
+  },
+  {
+    "name": "이천현",
+    "hanja": "伊川縣",
+    "category": "hyeon",
+    "x": 715.5,
+    "y": 1461.2
+  },
+  {
+    "name": "삭읍현",
+    "hanja": "朔邑縣",
+    "category": "hyeon",
+    "x": 732.7,
+    "y": 1531.9
+  },
+  {
+    "name": "임강현",
+    "hanja": "臨江縣",
+    "category": "hyeon",
+    "x": 656.8,
+    "y": 1549.0
+  },
+  {
+    "name": "장단현",
+    "hanja": "長湍縣",
+    "category": "hyeon",
+    "x": 691.8,
+    "y": 1600.4
+  },
+  {
+    "name": "임단현",
+    "hanja": "臨端縣",
+    "category": "hyeon",
+    "x": 715.6,
+    "y": 1589.8
+  },
+  {
+    "name": "여비현",
+    "hanja": "如羆縣",
+    "category": "hyeon",
+    "x": 649.5,
+    "y": 1590.3
+  },
+  {
+    "name": "강음현",
+    "hanja": "江陰縣",
+    "category": "hyeon",
+    "x": 577.3,
+    "y": 1551.4
+  },
+  {
+    "name": "임진현",
+    "hanja": "臨津縣",
+    "category": "hyeon",
+    "x": 661.5,
+    "y": 1625.3
+  },
+  {
+    "name": "덕수현",
+    "hanja": "德水縣",
+    "category": "hyeon",
+    "x": 632.6,
+    "y": 1629.6
+  },
+  {
+    "name": "호음현",
+    "hanja": "沍陰縣",
+    "category": "hyeon",
+    "x": 571.9,
+    "y": 1684.6
+  },
+  {
+    "name": "교동현",
+    "hanja": "喬桐縣",
+    "category": "hyeon",
+    "x": 546.9,
+    "y": 1669.6
+  },
+  {
+    "name": "수진현",
+    "hanja": "守鎭縣",
+    "category": "hyeon",
+    "x": 585.9,
+    "y": 1704.6
+  },
+  {
+    "name": "단계현",
+    "hanja": "檀溪縣",
+    "category": "hyeon",
+    "x": 615.0,
+    "y": 1463.2
+  },
+  {
+    "name": "진단현",
+    "hanja": "鎭湍縣",
+    "category": "hyeon",
+    "x": 644.5,
+    "y": 1357.3
+  },
+  {
+    "name": "구택현",
+    "hanja": "雊澤縣",
+    "category": "hyeon",
+    "x": 541.5,
+    "y": 1597.6
+  },
+  {
+    "name": "장새현",
+    "hanja": "獐塞縣",
+    "category": "hyeon",
+    "x": 569.1,
+    "y": 1384.5
+  },
+  {
+    "name": "토산현",
+    "hanja": "土山縣",
+    "category": "hyeon",
+    "x": 486.8,
+    "y": 1339.2
+  },
+  {
+    "name": "당악현",
+    "hanja": "唐嶽縣",
+    "category": "hyeon",
+    "x": 404.8,
+    "y": 1312.2
+  },
+  {
+    "name": "송현현",
+    "hanja": "松峴縣",
+    "category": "hyeon",
+    "x": 379.8,
+    "y": 1333.2
+  },
+  {
+    "name": "동평현",
+    "hanja": "東平縣",
+    "category": "hyeon",
+    "x": 1245.6,
+    "y": 2490.9
+  },
+  {
+    "name": "기장현",
+    "hanja": "機張縣",
+    "category": "hyeon",
+    "x": 1289.1,
+    "y": 2467.4
+  },
+  {
+    "name": "헌양현",
+    "hanja": "巘陽縣",
+    "category": "hyeon",
+    "x": 1276.3,
+    "y": 2361.4
+  },
+  {
+    "name": "칠제현",
+    "hanja": "漆隄縣",
+    "category": "hyeon",
+    "x": 1115.4,
+    "y": 2451.2
+  },
+  {
+    "name": "합포현",
+    "hanja": "合浦縣",
+    "category": "hyeon",
+    "x": 1119.4,
+    "y": 2476.2
+  },
+  {
+    "name": "웅신현",
+    "hanja": "熊神縣",
+    "category": "hyeon",
+    "x": 1173.4,
+    "y": 2504.2
+  },
+  {
+    "name": "밀진현",
+    "hanja": "密津縣",
+    "category": "hyeon",
+    "x": 1197.2,
+    "y": 2415.5
+  },
+  {
+    "name": "오구산현",
+    "hanja": "烏丘山縣",
+    "category": "hyeon",
+    "x": 1172.3,
+    "y": 2358.5
+  },
+  {
+    "name": "상약현",
+    "hanja": "尙藥縣",
+    "category": "hyeon",
+    "x": 1120.2,
+    "y": 2399.5
+  },
+  {
+    "name": "형산현",
+    "hanja": "荊山縣",
+    "category": "hyeon",
+    "x": 1165.2,
+    "y": 2340.7
+  },
+  {
+    "name": "소산현",
+    "hanja": "蘇山縣",
+    "category": "hyeon",
+    "x": 1192.2,
+    "y": 2337.7
+  },
+  {
+    "name": "현효현",
+    "hanja": "玄驍縣",
+    "category": "hyeon",
+    "x": 1094.7,
+    "y": 2332.1
+  },
+  {
+    "name": "하빈현",
+    "hanja": "河濱縣",
+    "category": "hyeon",
+    "x": 1094.7,
+    "y": 2266.1
+  },
+  {
+    "name": "팔리현",
+    "hanja": "八里縣",
+    "category": "hyeon",
+    "x": 1123.7,
+    "y": 2251.1
+  },
+  {
+    "name": "대구현",
+    "hanja": "大丘縣",
+    "category": "hyeon",
+    "x": 1134.7,
+    "y": 2269.1
+  },
+  {
+    "name": "화원현",
+    "hanja": "花園縣",
+    "category": "hyeon",
+    "x": 1112.7,
+    "y": 2298.1
+  },
+  {
+    "name": "해안현",
+    "hanja": "解顔縣",
+    "category": "hyeon",
+    "x": 1151.7,
+    "y": 2253.1
+  },
+  {
+    "name": "여량현",
+    "hanja": "餘糧縣",
+    "category": "hyeon",
+    "x": 1188.1,
+    "y": 2266.7
+  },
+  {
+    "name": "자인현",
+    "hanja": "慈仁縣",
+    "category": "hyeon",
+    "x": 1191.3,
+    "y": 2282.9
+  },
+  {
+    "name": "신녕현",
+    "hanja": "新寧縣",
+    "category": "hyeon",
+    "x": 1191.4,
+    "y": 2216.2
+  },
+  {
+    "name": "맹백현",
+    "hanja": "黽白縣",
+    "category": "hyeon",
+    "x": 1225.4,
+    "y": 2190.2
+  },
+  {
+    "name": "우풍현",
+    "hanja": "虞風縣",
+    "category": "hyeon",
+    "x": 1288.2,
+    "y": 2392.4
+  },
+  {
+    "name": "동진현",
+    "hanja": "東津縣",
+    "category": "hyeon",
+    "x": 1341.8,
+    "y": 2357.5
+  },
+  {
+    "name": "하곡현",
+    "hanja": "河曲縣",
+    "category": "hyeon",
+    "x": 1294.3,
+    "y": 2351.5
+  },
+  {
+    "name": "약장현",
+    "hanja": "約章縣",
+    "category": "hyeon",
+    "x": 1344.5,
+    "y": 2292.1
+  },
+  {
+    "name": "음집화현",
+    "hanja": "音汁火縣",
+    "category": "hyeon",
+    "x": 1288.4,
+    "y": 2249.3
+  },
+  {
+    "name": "장진현",
+    "hanja": "長鎭縣",
+    "category": "hyeon",
+    "x": 1259.5,
+    "y": 2172.1
+  },
+  {
+    "name": "임천현",
+    "hanja": "臨川縣",
+    "category": "hyeon",
+    "x": 1239.5,
+    "y": 2242.1
+  },
+  {
+    "name": "도동현",
+    "hanja": "道同縣",
+    "category": "hyeon",
+    "x": 1212.5,
+    "y": 2246.1
+  },
+  {
+    "name": "신광현",
+    "hanja": "柛光縣",
+    "category": "hyeon",
+    "x": 1294.3,
+    "y": 2185.8
+  },
+  {
+    "name": "기계현",
+    "hanja": "杞溪縣",
+    "category": "hyeon",
+    "x": 1281.3,
+    "y": 2204.8
+  },
+  {
+    "name": "임정현",
+    "hanja": "臨汀縣",
+    "category": "hyeon",
+    "x": 1323.3,
+    "y": 2237.8
+  },
+  {
+    "name": "기립현",
+    "hanja": "鬐立縣",
+    "category": "hyeon",
+    "x": 1356.3,
+    "y": 2259.8
+  },
+  {
+    "name": "안강현",
+    "hanja": "安康縣",
+    "category": "hyeon",
+    "x": 1289.3,
+    "y": 2231.8
+  },
+  {
+    "name": "청풍현",
+    "hanja": "淸風縣",
+    "category": "hyeon",
+    "x": 1019.2,
+    "y": 1917.2
+  },
+  {
+    "name": "적산현",
+    "hanja": "赤山縣",
+    "category": "hyeon",
+    "x": 1076.0,
+    "y": 1926.3
+  },
+  {
+    "name": "녹효현",
+    "hanja": "綠驍縣",
+    "category": "hyeon",
+    "x": 947.0,
+    "y": 1707.3
+  },
+  {
+    "name": "황천현",
+    "hanja": "潢川縣",
+    "category": "hyeon",
+    "x": 978.9,
+    "y": 1763.1
+  },
+  {
+    "name": "지평현",
+    "hanja": "砥平縣",
+    "category": "hyeon",
+    "x": 897.9,
+    "y": 1777.3
+  },
+  {
+    "name": "인풍현",
+    "hanja": "鄰豐縣",
+    "category": "hyeon",
+    "x": 1148.9,
+    "y": 1914.4
+  },
+  {
+    "name": "준수현",
+    "hanja": "浚水縣",
+    "category": "hyeon",
+    "x": 818.6,
+    "y": 1658.1
+  },
+  {
+    "name": "삼령현",
+    "hanja": "三嶺縣",
+    "category": "hyeon",
+    "x": 965.5,
+    "y": 1527.1
+  },
+  {
+    "name": "희제현",
+    "hanja": "狶蹄縣",
+    "category": "hyeon",
+    "x": 1027.2,
+    "y": 1581.5
+  },
+  {
+    "name": "치도현",
+    "hanja": "馳道縣",
+    "category": "hyeon",
+    "x": 1027.2,
+    "y": 1535.5
+  },
+  {
+    "name": "문등현",
+    "hanja": "文登縣",
+    "category": "hyeon",
+    "x": 960.3,
+    "y": 1482.9
+  },
+  {
+    "name": "수천현",
+    "hanja": "藪川縣",
+    "category": "hyeon",
+    "x": 953.4,
+    "y": 1378.2
+  },
+  {
+    "name": "선곡현",
+    "hanja": "善谷縣",
+    "category": "hyeon",
+    "x": 1191.9,
+    "y": 1995.1
+  },
+  {
+    "name": "옥마현",
+    "hanja": "玉馬縣",
+    "category": "hyeon",
+    "x": 1162.9,
+    "y": 1946.3
+  },
+  {
+    "name": "통구현",
+    "hanja": "通溝縣",
+    "category": "hyeon",
+    "x": 936.3,
+    "y": 1433.6
+  },
+  {
+    "name": "희령현",
+    "hanja": "狶領縣",
+    "category": "hyeon",
+    "x": 965.9,
+    "y": 1411.6
+  },
+  {
+    "name": "질운현",
+    "hanja": "軼雲縣",
+    "category": "hyeon",
+    "x": 921.2,
+    "y": 1401.3
+  },
+  {
+    "name": "단송현",
+    "hanja": "丹松縣",
+    "category": "hyeon",
+    "x": 853.3,
+    "y": 1399.4
+  },
+  {
+    "name": "서곡현",
+    "hanja": "瑞谷縣",
+    "category": "hyeon",
+    "x": 815.4,
+    "y": 1277.0
+  },
+  {
+    "name": "난산현",
+    "hanja": "蘭山縣",
+    "category": "hyeon",
+    "x": 837.2,
+    "y": 1313.8
+  },
+  {
+    "name": "익계현",
+    "hanja": "翊谿縣",
+    "category": "hyeon",
+    "x": 824.2,
+    "y": 1331.4
+  },
+  {
+    "name": "청산현",
+    "hanja": "菁山縣",
+    "category": "hyeon",
+    "x": 863.2,
+    "y": 1309.4
+  },
+  {
+    "name": "상음현",
+    "hanja": "霜陰縣",
+    "category": "hyeon",
+    "x": 877.2,
+    "y": 1250.4
+  },
+  {
+    "name": "산산현",
+    "hanja": "蒜山縣",
+    "category": "hyeon",
+    "x": 843.9,
+    "y": 1246.4
+  },
+  {
+    "name": "송산현",
+    "hanja": "松山縣",
+    "category": "hyeon",
+    "x": 812.9,
+    "y": 1198.4
+  },
+  {
+    "name": "유거현",
+    "hanja": "幽居縣",
+    "category": "hyeon",
+    "x": 782.9,
+    "y": 1214.4
+  },
+  {
+    "name": "두성현",
+    "hanja": "杜城縣",
+    "category": "hyeon",
+    "x": 731.3,
+    "y": 2288.5
+  },
+  {
+    "name": "금구현",
+    "hanja": "金溝縣",
+    "category": "hyeon",
+    "x": 730.1,
+    "y": 2303.8
+  },
+  {
+    "name": "만경현",
+    "hanja": "萬頃縣",
+    "category": "hyeon",
+    "x": 676.4,
+    "y": 2278.1
+  },
+  {
+    "name": "이성현",
+    "hanja": "利城縣",
+    "category": "hyeon",
+    "x": 689.4,
+    "y": 2262.6
+  },
+  {
+    "name": "평고현",
+    "hanja": "平皐縣",
+    "category": "hyeon",
+    "x": 717.4,
+    "y": 2273.6
+  },
+  {
+    "name": "무읍현",
+    "hanja": "武邑縣",
+    "category": "hyeon",
+    "x": 672.4,
+    "y": 2293.6
+  },
+  {
+    "name": "빈성현",
+    "hanja": "斌城縣",
+    "category": "hyeon",
+    "x": 697.7,
+    "y": 2338.3
+  },
+  {
+    "name": "정읍현",
+    "hanja": "井邑縣",
+    "category": "hyeon",
+    "x": 689.7,
+    "y": 2359.3
+  },
+  {
+    "name": "야서현",
+    "hanja": "野西縣",
+    "category": "hyeon",
+    "x": 732.4,
+    "y": 2325.3
+  },
+  {
+    "name": "부령현",
+    "hanja": "扶寧縣",
+    "category": "hyeon",
+    "x": 653.3,
+    "y": 2324.0
+  },
+  {
+    "name": "희안현",
+    "hanja": "喜安縣",
+    "category": "hyeon",
+    "x": 635.3,
+    "y": 2349.0
+  },
+  {
+    "name": "상질현",
+    "hanja": "尙質縣",
+    "category": "hyeon",
+    "x": 645.3,
+    "y": 2376.0
+  },
+  {
+    "name": "청거현",
+    "hanja": "淸渠縣",
+    "category": "hyeon",
+    "x": 845.3,
+    "y": 2248.2
+  },
+  {
+    "name": "단천현",
+    "hanja": "丹川縣",
+    "category": "hyeon",
+    "x": 895.3,
+    "y": 2229.2
+  },
+  {
+    "name": "시진현",
+    "hanja": "市津縣",
+    "category": "hyeon",
+    "x": 745.2,
+    "y": 2179.0
+  },
+  {
+    "name": "운제현",
+    "hanja": "雲梯縣",
+    "category": "hyeon",
+    "x": 802.8,
+    "y": 2210.0
+  },
+  {
+    "name": "구고현",
+    "hanja": "九皐縣",
+    "category": "hyeon",
+    "x": 769.7,
+    "y": 2374.5
+  },
+  {
+    "name": "마령현",
+    "hanja": "馬靈縣",
+    "category": "hyeon",
+    "x": 817.8,
+    "y": 2320.6
+  },
+  {
+    "name": "청웅현",
+    "hanja": "靑雄縣",
+    "category": "hyeon",
+    "x": 860.8,
+    "y": 2372.6
+  },
+  {
+    "name": "고택현",
+    "hanja": "高澤縣",
+    "category": "hyeon",
+    "x": 856.6,
+    "y": 2346.3
+  },
+  {
+    "name": "진안현",
+    "hanja": "鎭安縣",
+    "category": "hyeon",
+    "x": 839.0,
+    "y": 2303.1
+  },
+  {
+    "name": "야산현",
+    "hanja": "野山縣",
+    "category": "hyeon",
+    "x": 724.9,
+    "y": 2211.5
+  },
+  {
+    "name": "옥야현",
+    "hanja": "沃野縣",
+    "category": "hyeon",
+    "x": 714.9,
+    "y": 2253.8
+  },
+  {
+    "name": "우주현",
+    "hanja": "紆洲縣",
+    "category": "hyeon",
+    "x": 760.9,
+    "y": 2248.9
+  },
+  {
+    "name": "회미현",
+    "hanja": "澮尾縣",
+    "category": "hyeon",
+    "x": 660.7,
+    "y": 2260.9
+  },
+  {
+    "name": "옥구현",
+    "hanja": "沃溝縣",
+    "category": "hyeon",
+    "x": 637.7,
+    "y": 2257.9
+  },
+  {
+    "name": "함열현",
+    "hanja": "咸悅縣",
+    "category": "hyeon",
+    "x": 700.4,
+    "y": 2222.8
+  },
+  {
+    "name": "지산현",
+    "hanja": "支山縣",
+    "category": "hyeon",
+    "x": 1148.4,
+    "y": 1653.9
+  },
+  {
+    "name": "속제현",
+    "hanja": "梀隄縣",
+    "category": "hyeon",
+    "x": 1091.5,
+    "y": 1710.3
+  },
+  {
+    "name": "동산현",
+    "hanja": "洞山縣",
+    "category": "hyeon",
+    "x": 1165.4,
+    "y": 1625.3
+  },
+  {
+    "name": "정선현",
+    "hanja": "旌善縣",
+    "category": "hyeon",
+    "x": 1132.7,
+    "y": 1784.0
+  },
+  {
+    "name": "연무현",
+    "hanja": "緣武縣",
+    "category": "hyeon",
+    "x": 1237.4,
+    "y": 2121.9
+  },
+  {
+    "name": "적선현",
+    "hanja": "積善縣",
+    "category": "hyeon",
+    "x": 1261.4,
+    "y": 2090.7
+  },
+  {
+    "name": "해아현",
+    "hanja": "海阿縣",
+    "category": "hyeon",
+    "x": 1316.5,
+    "y": 2160.8
+  },
+  {
+    "name": "해곡현",
+    "hanja": "海曲縣",
+    "category": "hyeon",
+    "x": 1322.8,
+    "y": 1965.6
+  },
+  {
+    "name": "주천현",
+    "hanja": "酒泉縣",
+    "category": "hyeon",
+    "x": 1049.7,
+    "y": 1837.1
+  },
+  {
+    "name": "자춘현",
+    "hanja": "子春縣",
+    "category": "hyeon",
+    "x": 1105.7,
+    "y": 1896.1
+  },
+  {
+    "name": "백오현",
+    "hanja": "白烏縣",
+    "category": "hyeon",
+    "x": 1074.7,
+    "y": 1800.1
+  },
+  {
+    "name": "죽령현",
+    "hanja": "竹嶺縣",
+    "category": "hyeon",
+    "x": 1199.3,
+    "y": 1765.3
+  },
+  {
+    "name": "우계현",
+    "hanja": "羽谿縣",
+    "category": "hyeon",
+    "x": 1227.3,
+    "y": 1732.3
+  },
+  {
+    "name": "해리현",
+    "hanja": "海利縣",
+    "category": "hyeon",
+    "x": 1297.3,
+    "y": 1840.3
+  },
+  {
+    "name": "익령현",
+    "hanja": "翼嶺縣",
+    "category": "hyeon",
+    "x": 1123.1,
+    "y": 1576.4
+  },
+  {
+    "name": "환가현",
+    "hanja": "豢猳縣",
+    "category": "hyeon",
+    "x": 1035.4,
+    "y": 1386.5
+  },
+  {
+    "name": "편혐현",
+    "hanja": "偏嶮縣",
+    "category": "hyeon",
+    "x": 994.2,
+    "y": 1353.5
+  },
+  {
+    "name": "제상현",
+    "hanja": "隄上縣",
+    "category": "hyeon",
+    "x": 947.1,
+    "y": 1349.4
+  },
+  {
+    "name": "임도현",
+    "hanja": "臨道縣",
+    "category": "hyeon",
+    "x": 971.1,
+    "y": 1336.4
+  },
+  {
+    "name": "습계현",
+    "hanja": "習谿縣",
+    "category": "hyeon",
+    "x": 928.1,
+    "y": 1297.4
+  },
+  {
+    "name": "학포현",
+    "hanja": "鶴浦縣",
+    "category": "hyeon",
+    "x": 898.1,
+    "y": 1262.4
+  },
+  {
+    "name": "파천현",
+    "hanja": "派川縣",
+    "category": "hyeon",
+    "x": 919.1,
+    "y": 1274.4
+  },
+  {
+    "name": "용산현",
+    "hanja": "龍山縣",
+    "category": "hyeon",
+    "x": 671.2,
+    "y": 2512.4
+  },
+  {
+    "name": "현웅현",
+    "hanja": "玄雄縣",
+    "category": "hyeon",
+    "x": 685.2,
+    "y": 2540.0
+  },
+  {
+    "name": "기양현",
+    "hanja": "祁陽縣",
+    "category": "hyeon",
+    "x": 729.2,
+    "y": 2474.8
+  },
+  {
+    "name": "충렬현",
+    "hanja": "忠烈縣",
+    "category": "hyeon",
+    "x": 814.2,
+    "y": 2628.6
+  },
+  {
+    "name": "강원현",
+    "hanja": "薑原縣",
+    "category": "hyeon",
+    "x": 793.2,
+    "y": 2657.6
+  },
+  {
+    "name": "백주현",
+    "hanja": "柏舟縣",
+    "category": "hyeon",
+    "x": 811.2,
+    "y": 2607.6
+  },
+  {
+    "name": "조양현",
+    "hanja": "兆陽縣",
+    "category": "hyeon",
+    "x": 786.2,
+    "y": 2608.6
+  },
+  {
+    "name": "율원현",
+    "hanja": "栗原縣",
+    "category": "hyeon",
+    "x": 723.5,
+    "y": 2431.1
+  },
+  {
+    "name": "옥과현",
+    "hanja": "王菓縣",
+    "category": "hyeon",
+    "x": 758.6,
+    "y": 2455.8
+  },
+  {
+    "name": "곤미현",
+    "hanja": "昆湄縣",
+    "category": "hyeon",
+    "x": 628.2,
+    "y": 2632.6
+  },
+  {
+    "name": "계수현",
+    "hanja": "季水縣",
+    "category": "hyeon",
+    "x": 714.4,
+    "y": 2606.6
+  },
+  {
+    "name": "마읍현",
+    "hanja": "馬邑縣",
+    "category": "hyeon",
+    "x": 698.6,
+    "y": 2648.7
+  },
+  {
+    "name": "오아현",
+    "hanja": "烏兒縣",
+    "category": "hyeon",
+    "x": 690.6,
+    "y": 2702.7
+  },
+  {
+    "name": "대로현",
+    "hanja": "代勞縣",
+    "category": "hyeon",
+    "x": 738.6,
+    "y": 2643.7
+  },
+  {
+    "name": "진원현",
+    "hanja": "珍原縣",
+    "category": "hyeon",
+    "x": 678.5,
+    "y": 2454.9
+  },
+  {
+    "name": "삼계현",
+    "hanja": "森溪縣",
+    "category": "hyeon",
+    "x": 638.5,
+    "y": 2452.9
+  },
+  {
+    "name": "고창현",
+    "hanja": "高敞縣",
+    "category": "hyeon",
+    "x": 640.1,
+    "y": 2410.7
+  },
+  {
+    "name": "무송현",
+    "hanja": "茂松縣",
+    "category": "hyeon",
+    "x": 627.1,
+    "y": 2430.7
+  },
+  {
+    "name": "장사현",
+    "hanja": "長沙縣",
+    "category": "hyeon",
+    "x": 591.1,
+    "y": 2406.7
+  },
+  {
+    "name": "희양현",
+    "hanja": "晞陽縣",
+    "category": "hyeon",
+    "x": 881.0,
+    "y": 2552.8
+  },
+  {
+    "name": "해읍현",
+    "hanja": "海邑縣",
+    "category": "hyeon",
+    "x": 906.0,
+    "y": 2606.8
+  },
+  {
+    "name": "여산현",
+    "hanja": "廬山縣",
+    "category": "hyeon",
+    "x": 920.0,
+    "y": 2659.8
+  },
+  {
+    "name": "구례현",
+    "hanja": "求禮縣",
+    "category": "hyeon",
+    "x": 834.8,
+    "y": 2478.8
+  },
+  {
+    "name": "부유현",
+    "hanja": "富有縣",
+    "category": "hyeon",
+    "x": 788.0,
+    "y": 2527.8
+  },
+  {
+    "name": "동복현",
+    "hanja": "同福縣",
+    "category": "hyeon",
+    "x": 760.0,
+    "y": 2513.8
+  },
+  {
+    "name": "여미현",
+    "hanja": "汝湄縣",
+    "category": "hyeon",
+    "x": 723.1,
+    "y": 2525.4
+  },
+  {
+    "name": "철야현",
+    "hanja": "鐵冶縣",
+    "category": "hyeon",
+    "x": 668.8,
+    "y": 2566.2
+  },
+  {
+    "name": "회진현",
+    "hanja": "會津縣",
+    "category": "hyeon",
+    "x": 625.8,
+    "y": 2539.9
+  },
+  {
+    "name": "여황현",
+    "hanja": "艅艎縣",
+    "category": "hyeon",
+    "x": 662.8,
+    "y": 2495.9
+  },
+  {
+    "name": "탐진현",
+    "hanja": "耽津縣",
+    "category": "hyeon",
+    "x": 649.6,
+    "y": 2662.9
+  },
+  {
+    "name": "황원현",
+    "hanja": "黃原縣",
+    "category": "hyeon",
+    "x": 579.7,
+    "y": 2678.7
+  },
+  {
+    "name": "침명현",
+    "hanja": "浸溟縣",
+    "category": "hyeon",
+    "x": 609.7,
+    "y": 2705.1
+  },
+  {
+    "name": "고안현",
+    "hanja": "固安縣",
+    "category": "hyeon",
+    "x": 601.3,
+    "y": 2664.1
+  },
+  {
+    "name": "해제현",
+    "hanja": "海際縣",
+    "category": "hyeon",
+    "x": 541.4,
+    "y": 2513.8
+  },
+  {
+    "name": "함풍현",
+    "hanja": "咸豐縣",
+    "category": "hyeon",
+    "x": 593.4,
+    "y": 2523.8
+  },
+  {
+    "name": "다기현",
+    "hanja": "多岐縣",
+    "category": "hyeon",
+    "x": 613.4,
+    "y": 2493.8
+  },
+  {
+    "name": "진도현",
+    "hanja": "珍島縣",
+    "category": "hyeon",
+    "x": 549.3,
+    "y": 2714.0
+  },
+  {
+    "name": "첨탐현",
+    "hanja": "瞻耽縣",
+    "category": "hyeon",
+    "x": 513.5,
+    "y": 2732.1
+  },
+  {
+    "name": "안파현",
+    "hanja": "安波縣",
+    "category": "hyeon",
+    "x": 503.0,
+    "y": 2656.2
+  },
+  {
+    "name": "갈도현",
+    "hanja": "碣島縣",
+    "category": "hyeon",
+    "x": 584.8,
+    "y": 2476.4
+  },
+  {
+    "name": "염해현",
+    "hanja": "鹽海縣",
+    "category": "hyeon",
+    "x": 568.8,
+    "y": 2457.4
+  },
+  {
+    "name": "청효현",
+    "hanja": "靑驍縣",
+    "category": "hyeon",
+    "x": 1013.8,
+    "y": 2125.8
+  },
+  {
+    "name": "다인현",
+    "hanja": "多仁縣",
+    "category": "hyeon",
+    "x": 1075.8,
+    "y": 2084.8
+  },
+  {
+    "name": "화창현",
+    "hanja": "化昌縣",
+    "category": "hyeon",
+    "x": 994.8,
+    "y": 2077.8
+  },
+  {
+    "name": "은정현",
+    "hanja": "殷正縣",
+    "category": "hyeon",
+    "x": 1091.2,
+    "y": 1995.0
+  },
+  {
+    "name": "영안현",
+    "hanja": "永安縣",
+    "category": "hyeon",
+    "x": 1128.8,
+    "y": 2042.2
+  },
+  {
+    "name": "가유현",
+    "hanja": "嘉猷縣",
+    "category": "hyeon",
+    "x": 1042.8,
+    "y": 2031.9
+  },
+  {
+    "name": "안인현",
+    "hanja": "安仁縣",
+    "category": "hyeon",
+    "x": 1057.8,
+    "y": 1990.9
+  },
+  {
+    "name": "청천현",
+    "hanja": "淸川縣",
+    "category": "hyeon",
+    "x": 928.8,
+    "y": 2015.0
+  },
+  {
+    "name": "기산현",
+    "hanja": "耆山縣",
+    "category": "hyeon",
+    "x": 918.3,
+    "y": 2124.4
+  },
+  {
+    "name": "가선현",
+    "hanja": "嘉善縣",
+    "category": "hyeon",
+    "x": 982.8,
+    "y": 2021.7
+  },
+  {
+    "name": "관산현",
+    "hanja": "冠山縣",
+    "category": "hyeon",
+    "x": 1012.8,
+    "y": 1991.4
+  },
+  {
+    "name": "호계현",
+    "hanja": "虎溪縣",
+    "category": "hyeon",
+    "x": 1023.8,
+    "y": 2016.4
+  },
+  {
+    "name": "도안현",
+    "hanja": "道安縣",
+    "category": "hyeon",
+    "x": 972.0,
+    "y": 2129.4
+  },
+  {
+    "name": "안정현",
+    "hanja": "安貞縣",
+    "category": "hyeon",
+    "x": 890.3,
+    "y": 2107.7
+  },
+  {
+    "name": "황간현",
+    "hanja": "黃澗縣",
+    "category": "hyeon",
+    "x": 953.4,
+    "y": 2154.9
+  },
+  {
+    "name": "양산현",
+    "hanja": "陽山縣",
+    "category": "hyeon",
+    "x": 894.4,
+    "y": 2185.9
+  },
+  {
+    "name": "어모현",
+    "hanja": "禦侮縣",
+    "category": "hyeon",
+    "x": 1001.3,
+    "y": 2165.5
+  },
+  {
+    "name": "금산현",
+    "hanja": "金山縣",
+    "category": "hyeon",
+    "x": 999.3,
+    "y": 2205.5
+  },
+  {
+    "name": "지례현",
+    "hanja": "知禮縣",
+    "category": "hyeon",
+    "x": 988.3,
+    "y": 2241.5
+  },
+  {
+    "name": "무풍현",
+    "hanja": "茂豐縣",
+    "category": "hyeon",
+    "x": 940.3,
+    "y": 2249.5
+  },
+  {
+    "name": "이동혜현",
+    "hanja": "尒同兮縣",
+    "category": "hyeon",
+    "x": 1079.0,
+    "y": 2178.5
+  },
+  {
+    "name": "군위현",
+    "hanja": "軍威縣",
+    "category": "hyeon",
+    "x": 1119.7,
+    "y": 2151.9
+  },
+  {
+    "name": "효령현",
+    "hanja": "孝靈縣",
+    "category": "hyeon",
+    "x": 1133.7,
+    "y": 2182.9
+  },
+  {
+    "name": "단밀현",
+    "hanja": "單密縣",
+    "category": "hyeon",
+    "x": 1068.7,
+    "y": 2116.0
+  },
+  {
+    "name": "안현현",
+    "hanja": "安賢縣",
+    "category": "hyeon",
+    "x": 1110.7,
+    "y": 2113.0
+  },
+  {
+    "name": "비옥현",
+    "hanja": "比屋縣",
+    "category": "hyeon",
+    "x": 1112.7,
+    "y": 2129.0
+  },
+  {
+    "name": "진보현",
+    "hanja": "眞寶縣",
+    "category": "hyeon",
+    "x": 1153.7,
+    "y": 2122.0
+  },
+  {
+    "name": "직녕현",
+    "hanja": "直寧縣",
+    "category": "hyeon",
+    "x": 1137.4,
+    "y": 2083.7
+  },
+  {
+    "name": "고구현",
+    "hanja": "高丘縣",
+    "category": "hyeon",
+    "x": 1147.4,
+    "y": 2100.7
+  },
+  {
+    "name": "일계현",
+    "hanja": "日谿縣",
+    "category": "hyeon",
+    "x": 1179.4,
+    "y": 2097.9
+  }
+]
