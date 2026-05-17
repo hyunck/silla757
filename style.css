@@ -499,6 +499,78 @@ input {
   text-align: center;
 }
 
+/* 설명 상단 줄 (descriptionTop) — 굵게, 약간 강조 */
+.detail-desc-top {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.55;
+  margin-bottom: 6px;
+  letter-spacing: -0.2px;
+}
+/* 설명 본문 */
+.detail-desc {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* 관할 영현·정 목록 */
+.detail-subordinates {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+.detail-sub-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.detail-sub-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.detail-sub-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 11px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  background: #f5f3ed;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background var(--transition-fast),
+              color var(--transition-fast),
+              border-color var(--transition-fast),
+              transform var(--transition-fast);
+  font-family: inherit;
+}
+.detail-sub-chip:hover {
+  background: var(--accent-light);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.detail-sub-chip:active {
+  transform: scale(0.97);
+}
+.detail-sub-chip.disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background: transparent;
+}
+.detail-sub-chip.disabled:hover {
+  background: transparent;
+  color: var(--text-muted);
+  border-color: var(--border);
+}
+
 /* =========================================================
    패널 토글 버튼 (항상 표시, 패널 가장자리에 부착)
    ========================================================= */
