@@ -96,6 +96,7 @@
     detailTitle: $('#detailTitle'),
     detailHanja: $('#detailHanja'),
     detailCategoryTag: $('#detailCategoryTag'),
+    detailContent: $('#detailContent'),
     zoomIn: $('#zoomInBtn'),
     zoomOut: $('#zoomOutBtn'),
     zoomReset: $('#resetBtn'),
@@ -673,11 +674,116 @@
     els.detailCategoryTag.textContent = CATEGORY_LABEL[category] || '';
     els.detailCategoryTag.className = 'detail-category-tag cat-' + category;
 
+    // 상세 설명 렌더링
+    renderDetailContent(name, category);
+
     // 클릭된 텍스트가 패널 영역에 가려진다면, 우측으로 살짝 이동
     // (패널이 새로 열린 경우에만 보정 — 이미 열려있던 경우엔 사용자 의도대로 클릭한 것)
     if (textEl && !wasPanelOpen && window.innerWidth > 640) {
       panToRevealIfHidden(textEl);
     }
+  }
+
+  /**
+   * 설명창 본문(detailContent)을 렌더링.
+   * - descriptionTop이 있으면 윗줄(굵게) + 아랫줄(description) 두 줄 구조
+   * - 그 외에는 description 한 줄만
+   * - subordinates(영현·정 목록)가 있으면 그 아래 칩 형태로 렌더링, 클릭 시 해당 지명으로 이동
+   * - description 자체가 없는 경우(주변국 등) placeholder 표시
+   */
+  function renderDetailContent(name, category) {
+    const container = els.detailContent;
+    if (!container) return;
+    container.innerHTML = '';
+
+    // places.json에서 해당 지명+카테고리의 데이터를 찾아 메타정보 추출
+    const place = state.places.find(p => p.name === name && p.category === category);
+
+    if (!place || !place.description) {
+      // 설명이 없는 경우 placeholder 유지 (주변국 등)
+      const ph = document.createElement('p');
+      ph.className = 'detail-placeholder';
+      ph.textContent = '상세 설명이 추후 추가될 예정입니다.';
+      container.appendChild(ph);
+      return;
+    }
+
+    // 윗줄 (descriptionTop, 굵게)
+    if (place.descriptionTop) {
+      const top = document.createElement('p');
+      top.className = 'detail-desc-top';
+      top.textContent = place.descriptionTop;
+      container.appendChild(top);
+    }
+
+    // 본문 설명 (description, 기본 굵기)
+    const desc = document.createElement('p');
+    desc.className = 'detail-desc';
+    desc.textContent = place.description;
+    container.appendChild(desc);
+
+    // 영현·정 목록 (subordinates) — 있으면 칩 형태로 렌더링
+    if (place.subordinates && place.subordinates.length > 0) {
+      const subWrap = document.createElement('div');
+      subWrap.className = 'detail-subordinates';
+
+      const label = document.createElement('div');
+      label.className = 'detail-sub-label';
+      // 라벨 텍스트: 군이 정을 관할하면 "관할 영현·정", 그 외엔 "관할 영현"
+      const hasJeong = place.subordinates.some(n => n.endsWith('정'));
+      const hasHyeon = place.subordinates.some(n => n.endsWith('현'));
+      let labelText;
+      if (hasJeong && hasHyeon) labelText = '관할 영현·정';
+      else if (hasJeong) labelText = '관할 정';
+      else labelText = '관할 영현';
+      label.textContent = `${labelText} (${place.subordinates.length})`;
+      subWrap.appendChild(label);
+
+      const chipList = document.createElement('div');
+      chipList.className = 'detail-sub-chips';
+
+      place.subordinates.forEach(subName => {
+        const chip = document.createElement('button');
+        chip.type = 'button';
+        chip.className = 'detail-sub-chip';
+        chip.textContent = subName;
+
+        // 클릭 시 해당 지명으로 이동 (검색 결과 클릭과 동일한 동작)
+        // subName에 해당하는 place를 places.json에서 찾아 selectSearchResult 호출
+        const targetPlace = findSubordinatePlace(subName);
+        if (targetPlace) {
+          chip.addEventListener('click', () => selectSearchResult(targetPlace));
+        } else {
+          // SVG/places.json에 없는 지명(예: 부리현) — 비활성화 표시
+          chip.classList.add('disabled');
+          chip.disabled = true;
+          chip.title = '지도에 표시되지 않은 지명';
+        }
+
+        chipList.appendChild(chip);
+      });
+
+      subWrap.appendChild(chipList);
+      container.appendChild(subWrap);
+    }
+  }
+
+  /**
+   * 영현 이름으로 places.json에서 해당 지명 찾기.
+   * 현은 hyeon, 정은 gijeong6 또는 jeong10 카테고리.
+   * 이름이 같은 항목 중 우선순위: hyeon > gijeong6 > jeong10
+   */
+  function findSubordinatePlace(name) {
+    const candidates = state.places.filter(p => p.name === name);
+    if (candidates.length === 0) return null;
+    if (candidates.length === 1) return candidates[0];
+    // 동명이지명: 영현 칩이라면 현(hyeon)을 우선
+    const priority = ['hyeon', 'gijeong6', 'jeong10', 'gun'];
+    for (const cat of priority) {
+      const found = candidates.find(p => p.category === cat);
+      if (found) return found;
+    }
+    return candidates[0];
   }
 
   function panToRevealIfHidden(textEl) {
